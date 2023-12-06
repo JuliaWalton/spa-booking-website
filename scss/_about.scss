@@ -1,0 +1,24 @@
+.about {
+    margin: 6rem 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.about__text {
+    display: grid;
+    gap: 1rem;
+    max-width: 400px;
+    justify-self: center;
+}
+
+.carousel {
+    height: 400px;
+}
+
+.carousel__image {
+    width: 100%;
+    height: 500px;
+    aspect-ratio: 1.5/1;
+    object-fit: cover;
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- googlefonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400;1,900&family=Playfair+Display:ital,wght@1,500&display=swap"
+        rel="stylesheet">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+
+    <title>Spa Selene</title>
+</head>
+<body>
+    <header id ="home" class="home">
+        <nav id="nav" class="nav">
+            <!-- nav header -->
+            <div class="nav-header">
+                <a href="#home">
+                    <img src="images/logo.png" width="140" alt="home">
+                </a>
+                <button id="nav-toggle" class="nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="links-container">
+                    <button id="nav-close-btn" class="nav-close-btn">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <ul class="links">
+                        <li>
+                            <a href="#services" class="visit-link">services</a>
+                        </li>
+                        <li>
+                            <a href="#amenities" class="visit-link">amenities</a>
+                        </li>
+                        <li>
+                            <a href="#about" class="visit-link">about</a>
+                        </li>
+                        <li>
+                            <a href="#reserve" class="visit-link">reserve now</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- links -->
+            
+        </nav>
+        <!-- banner -->
+        <div class="banner">
+            <h1 class="banner-title">serenity awaits</h1>
+            <p class="banner-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque repellendus molestiae vel illo incidunt laboriosam
+            sit, fugiat alias dolore explicabo.
+            </p>
+            <a href="#reserve" class="reserve-btn">
+                reserve now
+            </a>
+        </div>
+    </header>
+
+
+    <main>
+        <!-- about content -->
+        <article class="about">
+            <div class="about__text">
+                <h2>About Spa Selene</h2>
+                <h4><i>Time to Unwind</i>make this text same font as hero</h4>
+                <!-- <h4><i>It's Time to Feel Your Best</i></h4> -->
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor at ipsam illo provident quam. Veritatis quos,
+                    quia minima iste eaque nulla ipsam, inventore nesciunt natus amet esse molestias reprehenderit saepe. Lorem
+                    ipsum dolor sit amet consectetur, adipisicing elit. Quis assumenda nostrum nam perferendis ut voluptate
+                    doloremque obcaecati totam quod doloribus molestias alias necessitatibus itaque tempore, eos voluptatem
+                    accusamus at dolore?</p>
+                <a class="about__text book-btn" href="">Book Treatment</a>
+            </div>
+            <div class="carousel">
+                <!-- <img class="carousel__image" src="/images/unsplash/li-yang-a8iCZvtrHpQ-unsplash.jpg" alt=""> -->
+                <!-- <img class="carousel__image" src="/images/unsplash/about/visualsofdana-IfsRTQu6Djk-unsplash - Copy.jpg" alt=""> -->
+                <img class="carousel__image" src="/images/unsplash/about/huum-xn_MghoT9HE-unsplash - Copy.jpg" alt="">
+            </div>
+        </article>
+
+        <!-- treatments content -->
+        <article class="treatments">
+            <div class="treatments-explore">
+                <h3>Explore our treatment menu</h3>
+            </div>
+            <div class="treatments-container">
+                <div class="treatments-btn-container">
+                    <button class="filter-btn" data-orange="massages">
+                        Massage
+                    </button>
+                    <button class="filter-btn" data-orange="skincare">
+                        Skincare
+                    </button>
+                    <button class="filter-btn" data-orange="hair">
+                        Haircare
+                    </button>
+                    <!-- <button class="filter-btn" data-orange="gentlemen">
+                        Bridal
+                    </button> -->
+                    <button class="filter-btn" data-orange="gentlemen">
+                        Gentlemen
+                    </button>
+                    <button class="filter-btn" data-orange="packages">
+                        Deluxe Packages
+                    </button>
+                </div>
+            </div>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

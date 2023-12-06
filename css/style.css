@@ -1,0 +1,243 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 1.2rem;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+.home {
+  color: white;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.1);
+  background-image: url(/images/unsplash/haley-phelps-S-llxYh3GzI-unsplash.jpg);
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: 80% 40%;
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  position: relative;
+}
+
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 2rem;
+}
+
+.nav-toggle {
+  background: none;
+  color: inherit;
+  border: none;
+  font-size: 2rem;
+}
+
+.nav-toggle:hover {
+  transform: scale(1.3);
+  transition: 0.2s ease-in;
+}
+
+.links-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100vh;
+  display: none;
+  background-color: hsla(0, 0%, 0%, 0.5);
+  backdrop-filter: blur(0.5rem);
+}
+
+.nav-header.show-links > .links-container {
+  display: block;
+}
+
+.nav-close-btn {
+  color: white;
+  font-size: 2rem;
+  float: right;
+  padding: 1.5rem 2.5rem;
+}
+
+.nav-close-btn:hover {
+  transform: scale(1.3);
+  transition: 0.2s ease-in;
+}
+
+.links {
+  list-style-type: none;
+  padding: 5rem 2rem;
+}
+
+.links li {
+  padding-block: 2rem;
+  border-radius: 1rem;
+}
+
+.links li:hover {
+  background-color: rgba(187, 247, 255, 0.856);
+  transition: 0.4s ease-in;
+}
+
+.links li:hover a,
+.links li a:hover {
+  color: black;
+  letter-spacing: 2px;
+  transition: 0.2s ease-in;
+}
+
+a {
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+  text-transform: capitalize;
+  padding: 2rem;
+}
+
+.banner {
+  align-self: center;
+  justify-content: start;
+  padding-inline: 6rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.banner-title {
+  font-family: "Playfair Display", serif;
+  font-size: 6rem;
+  letter-spacing: 4px;
+  line-height: 1;
+}
+
+.banner-description {
+  max-width: 600px;
+}
+
+.banner .reserve-btn {
+  background-color: rgb(211, 55, 55);
+  padding: 0.5rem 1rem;
+  justify-self: start;
+  font-size: 1.3rem;
+  border-radius: 0.5rem;
+  letter-spacing: 0.9px;
+}
+
+.banner .reserve-btn:hover {
+  background-color: black;
+}
+
+.about {
+  margin: 6rem 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.about__text {
+  display: grid;
+  gap: 1rem;
+  max-width: 400px;
+  justify-self: center;
+}
+
+.carousel {
+  height: 400px;
+}
+
+.carousel__image {
+  width: 100%;
+  height: 500px;
+  aspect-ratio: 1.5/1;
+  object-fit: cover;
+}
+
+.treatments-explore {
+  background-color: black;
+  padding: 2rem;
+}
+
+.treatments-explore h3 {
+  font-family: "Playfair Display", serif;
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+  letter-spacing: 3px;
+}
+
+.treatments-btn-container {
+  display: flex;
+  gap: 5rem;
+  padding: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.filter-btn:hover {
+  text-decoration: underline;
+}/*# sourceMappingURL=style.css.map */

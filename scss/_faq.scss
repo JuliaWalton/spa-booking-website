@@ -1,0 +1,63 @@
+.faq {
+    padding-top: 2rem;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: url('/images/unsplash/orchid.png');
+    background-repeat: no-repeat;
+    background-size: 40%;
+    background-position: -5% 60%;
+    height: 100%;
+}
+
+.faq-center h2 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    padding: 1rem;
+}
+
+.faq-center {
+    height: 650px;
+    margin-left: 20rem;
+}
+
+
+.faq-question {
+    border: 1px solid black;
+    // background-color: rgb(255, 192, 192);
+    margin: 1rem;
+    width: 800px;
+    padding: 2rem;
+}
+
+.faq-question-title p {
+    font-size: 1.7rem;
+}
+
+.faq-question-title {
+    display: flex;
+    // gap: 45rem;
+    justify-content: space-between;
+    font-weight: 700;
+    font-family: 'playfair display';
+    letter-spacing: 2px;
+}
+
+.faq-question-text {
+    text-align: left;
+    margin-top: 2rem;
+    display: none;
+}
+
+.faq-question.show-answer .faq-question-text {
+    display: flex;
+}
+
+.faq-question-btn {
+    transition: 90ms ease-in;
+}
+
+.faq-question.show-answer .faq-question-btn {
+    transform: scaleY(-1);
+}

@@ -1,0 +1,66 @@
+.booking {
+    margin: 10rem 15rem 5rem;
+}
+
+fieldset {
+    display: grid;
+    justify-content: start;
+}
+
+.booking h2 {
+    font-size: 2rem;
+}
+
+.form-card {
+    background-color: rgb(254, 240, 255);
+    box-shadow: 10px 5px 20px rgb(87, 87, 87);
+    padding: 2rem 5rem;
+    display: none;
+}
+
+.form-card>.step-title {
+    font-size: 2rem;
+    text-align: center
+}
+
+.form-group {
+    display: grid;
+    margin-bottom: 1rem;
+}
+
+.form-group:nth-child(2) {
+    min-width: 500px;
+}
+
+.form-group:last-child {
+    margin: 0;
+}
+
+.form-group>label {
+    font-size: 1.5rem;
+}
+
+input,
+select {
+    margin-top: .5rem;
+    font-size: 1rem;
+    padding: .5em .75em;
+}
+
+.form-flex {
+    display: flex;
+    gap: 1rem;
+}
+
+/* active class toggle */
+
+.form-card.active {
+    display: block;
+}
+
+.booking button {
+    padding: .5rem 1rem;
+    font-size: inherit;
+    background-color: rgb(193, 245, 245);
+    border: none;
+}

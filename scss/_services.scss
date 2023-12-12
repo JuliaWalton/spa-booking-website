@@ -1,25 +1,116 @@
+.treatments-content {
+    margin: 1rem 6rem;
+}
+
+
+
+.massages{
+    background: url('/images/unsplash/palm.png');
+    background-position: 105% 120%;
+}
+
+.skincare {
+    background: url('/images/unsplash/pexels-anna-shvets-3851556.png');
+    background-position: 100% 100%;
+}
+
+.haircare {
+    background: url('/images/unsplash/haircare.png');
+    background-position: 95% 180%;
+}
+
+.gentlemen {
+    background: url('/images/unsplash/skincare.png');
+    background-position: 105% 220%;
+}
+
+.packages {
+    background: url('/images/unsplash/gift.png');
+    background-position: 99% 120%;
+}
+.treatments {
+    background-repeat: no-repeat;
+    background-size: 40%;
+    height: 100%;
+    display: grid;
+}
+
 .treatments-explore {
     background-color: black;
-    padding: 2rem;
+    padding: 1.5rem;
+    align-self: center;
 }
 
 .treatments-explore h3 {
     font-family: 'Playfair Display', serif;
     color: white;
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.5rem;
     letter-spacing: 3px;
 }
 
 .treatments-btn-container {
     display: flex;
     gap: 5rem;
-    padding: 2rem;
+    padding-block: 1.5rem 1rem;
     // background-color: red;
     align-items: center;
     justify-content: center;
+    font-size: 1rem;
 }
 
-.filter-btn:hover {
+.filter-btn {
+    padding: .5rem 1rem;
+}
+
+.filter-btn:hover, 
+.filter-btn:focus {
     text-decoration: underline;
+}
+
+.filter-btn.active {
+    text-decoration: underline;
+    background-color: rgba(218, 165, 32, 0.719);
+    border-radius: 1rem;
+}
+
+.black-line {
+    padding: 1rem;
+    background-color: black;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    // background-color: red;
+    gap: 2rem;
+    min-height: 500px;
+    margin-bottom: 3.5rem;
+}
+
+.option {
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    align-content: start;
+    gap: 1rem;
+    border: 1px solid black;
+    padding: 1.5rem 2rem;
+    transition: .5s ease-in;
+}
+
+.option .price {
+    font-style: italic;
+    align-self: end;
+}
+
+.option:hover {
+    background-color: rgba(218, 165, 32, 0.527);
+}
+
+.option h4 {
+    text-transform: uppercase;
+}
+
+.option p {
+    font-size: 1rem;
 }

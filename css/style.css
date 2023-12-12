@@ -103,18 +103,22 @@ button {
   transition: 0.2s ease-in;
 }
 
-.links-container {
+.nav-header .links-container {
   position: fixed;
   top: 0;
   right: 0;
   width: 40%;
   height: 100vh;
-  display: none;
   background-color: hsla(0, 0%, 0%, 0.5);
   backdrop-filter: blur(0.5rem);
+  display: none;
 }
 
 .nav-header.show-links > .links-container {
+  display: block;
+}
+
+.nav-header.desktop-nav .links-container {
   display: block;
 }
 
@@ -122,7 +126,7 @@ button {
   color: white;
   font-size: 2rem;
   float: right;
-  padding: 1.5rem 2.5rem;
+  padding: 3.5rem 2.75rem;
 }
 
 .nav-close-btn:hover {
@@ -141,15 +145,34 @@ button {
 }
 
 .links li:hover {
-  background-color: rgba(187, 247, 255, 0.856);
+  background-color: rgba(187, 247, 255, 0.8);
   transition: 0.4s ease-in;
 }
 
 .links li:hover a,
 .links li a:hover {
   color: black;
-  letter-spacing: 2px;
   transition: 0.2s ease-in;
+}
+
+.nav-header.desktop-nav .nav-toggle,
+.nav-header.desktop-nav .nav-close-btn {
+  display: none;
+}
+
+.nav-header.desktop-nav .links {
+  display: flex;
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-header.desktop-nav .links-container {
+  position: relative;
+  width: auto;
+  height: auto;
+  background-color: transparent;
+  backdrop-filter: blur(0);
 }
 
 a {
@@ -180,11 +203,10 @@ a {
 }
 
 .banner .reserve-btn {
-  background-color: rgb(211, 55, 55);
+  background-color: rgb(216, 56, 123);
   padding: 0.5rem 1rem;
   justify-self: start;
   font-size: 1.3rem;
-  border-radius: 0.5rem;
   letter-spacing: 0.9px;
 }
 
@@ -193,51 +215,452 @@ a {
 }
 
 .about {
-  margin: 6rem 4rem;
+  margin-block: 0.5rem;
+  padding: 6rem 4rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
 }
 
-.about__text {
+.about-text {
   display: grid;
   gap: 1rem;
-  max-width: 400px;
   justify-self: center;
+  align-self: center;
+}
+
+.about-title {
+  max-width: 500px;
+  padding-bottom: 1.5rem;
+}
+
+.about-title h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 3.5rem;
+}
+
+.about-title small {
+  justify-self: end;
+  margin-right: 3rem;
+}
+
+.about-text-hours {
+  text-align: center;
+  padding-block: 0.5rem;
+}
+
+.schedule {
+  margin-top: 1rem;
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+}
+
+.hours {
+  font-style: italic;
+}
+
+.book-btn {
+  background-color: rgb(224, 53, 124);
+  justify-self: start;
+  padding: 0.5rem 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.learn-btn {
+  background-color: black;
+  justify-self: start;
+  padding: 0.5rem 2.5rem;
+  margin: 0;
+}
+
+.book-btn:hover,
+.learn-btn:hover {
+  background: linear-gradient(rgb(184, 123, 255), rgb(214, 72, 72));
 }
 
 .carousel {
-  height: 400px;
+  width: 100%;
+  position: relative;
 }
 
-.carousel__image {
+.carousel ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.about-text-hours {
+  margin-top: 1rem;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: 0.4s opacity ease-in-out;
+  transition-delay: 0.4s;
+}
+
+.slide > img {
+  display: block;
   width: 100%;
-  height: 500px;
-  aspect-ratio: 1.5/1;
+  height: 100%;
   object-fit: cover;
+  object-position: center;
+}
+
+.slide[data-active] {
+  opacity: 1;
+  z-index: 1;
+  transition-delay: 0ms;
+}
+
+.carousel-button {
+  position: absolute;
+  background: none;
+  border: none;
+  border-radius: 0;
+  font-size: 2rem;
+  height: 100%;
+  top: 50%;
+  z-index: 5;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  border-radius: 0.25rem;
+  padding: 0 1rem;
+}
+
+.carousel-button:focus,
+.carousel-button:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.carousel-button.next {
+  right: 0.01rem;
+}
+
+.treatments-content {
+  margin: 1rem 6rem;
+}
+
+.massages {
+  background: url("/images/unsplash/palm.png");
+  background-position: 105% 120%;
+}
+
+.skincare {
+  background: url("/images/unsplash/pexels-anna-shvets-3851556.png");
+  background-position: 100% 100%;
+}
+
+.haircare {
+  background: url("/images/unsplash/haircare.png");
+  background-position: 95% 180%;
+}
+
+.gentlemen {
+  background: url("/images/unsplash/skincare.png");
+  background-position: 105% 220%;
+}
+
+.packages {
+  background: url("/images/unsplash/gift.png");
+  background-position: 99% 120%;
+}
+
+.treatments {
+  background-repeat: no-repeat;
+  background-size: 40%;
+  height: 100%;
+  display: grid;
 }
 
 .treatments-explore {
   background-color: black;
-  padding: 2rem;
+  padding: 1.5rem;
+  align-self: center;
 }
 
 .treatments-explore h3 {
   font-family: "Playfair Display", serif;
   color: white;
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.5rem;
   letter-spacing: 3px;
 }
 
 .treatments-btn-container {
   display: flex;
   gap: 5rem;
-  padding: 2rem;
+  padding-block: 1.5rem 1rem;
   align-items: center;
   justify-content: center;
+  font-size: 1rem;
 }
 
-.filter-btn:hover {
+.filter-btn {
+  padding: 0.5rem 1rem;
+}
+
+.filter-btn:hover,
+.filter-btn:focus {
   text-decoration: underline;
+}
+
+.filter-btn.active {
+  text-decoration: underline;
+  background-color: rgba(218, 165, 32, 0.719);
+  border-radius: 1rem;
+}
+
+.black-line {
+  padding: 1rem;
+  background-color: black;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  min-height: 500px;
+  margin-bottom: 3.5rem;
+}
+
+.option {
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  align-content: start;
+  gap: 1rem;
+  border: 1px solid black;
+  padding: 1.5rem 2rem;
+  transition: 0.5s ease-in;
+}
+
+.option .price {
+  font-style: italic;
+  align-self: end;
+}
+
+.option:hover {
+  background-color: rgba(218, 165, 32, 0.527);
+}
+
+.option h4 {
+  text-transform: uppercase;
+}
+
+.option p {
+  font-size: 1rem;
+}
+
+.faq {
+  padding-top: 2rem;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: url("/images/unsplash/orchid.png");
+  background-repeat: no-repeat;
+  background-size: 40%;
+  background-position: -5% 60%;
+  height: 100%;
+}
+
+.faq-center h2 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  padding: 1rem;
+}
+
+.faq-center {
+  height: 650px;
+  margin-left: 20rem;
+}
+
+.faq-question {
+  border: 1px solid black;
+  margin: 1rem;
+  width: 800px;
+  padding: 2rem;
+}
+
+.faq-question-title p {
+  font-size: 1.7rem;
+}
+
+.faq-question-title {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  font-family: "playfair display";
+  letter-spacing: 2px;
+}
+
+.faq-question-text {
+  text-align: left;
+  margin-top: 2rem;
+  display: none;
+}
+
+.faq-question.show-answer .faq-question-text {
+  display: flex;
+}
+
+.faq-question-btn {
+  transition: 90ms ease-in;
+}
+
+.faq-question.show-answer .faq-question-btn {
+  transform: scaleY(-1);
+}
+
+.booking {
+  margin: 10rem 15rem 5rem;
+}
+
+fieldset {
+  display: grid;
+  justify-content: start;
+}
+
+.booking h2 {
+  font-size: 2rem;
+}
+
+.form-card {
+  background-color: rgb(254, 240, 255);
+  box-shadow: 10px 5px 20px rgb(87, 87, 87);
+  padding: 2rem 5rem;
+  display: none;
+}
+
+.form-card > .step-title {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.form-group {
+  display: grid;
+  margin-bottom: 1rem;
+}
+
+.form-group:nth-child(2) {
+  min-width: 500px;
+}
+
+.form-group:last-child {
+  margin: 0;
+}
+
+.form-group > label {
+  font-size: 1.5rem;
+}
+
+input,
+select {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  padding: 0.5em 0.75em;
+}
+
+.form-flex {
+  display: flex;
+  gap: 1rem;
+}
+
+/* active class toggle */
+.form-card.active {
+  display: block;
+}
+
+.booking button {
+  padding: 0.5rem 1rem;
+  font-size: inherit;
+  background-color: rgb(193, 245, 245);
+  border: none;
+}
+
+.reviews {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-block: 2rem;
+}
+
+.title {
+  font-size: 2rem;
+}
+
+.img-container {
+  width: 200px;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.review {
+  display: grid;
+  justify-items: center;
+  gap: 1rem;
+  background-color: aliceblue;
+}
+
+.info {
+  max-width: 800px;
+}
+
+.person-img {
+  width: 100%;
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  position: relative;
+}
+
+.author {
+  font-size: 1.5rem;
+}
+
+.reviews .btn {
+  background-color: rgb(255, 183, 245);
+}
+
+footer {
+  background-color: black;
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.5fr;
+  align-items: start;
+  padding: 2rem 5rem 5rem;
+}
+
+footer img {
+  width: 300px;
+}
+
+footer a {
+  padding: 0;
+}
+
+.footer-contact {
+  list-style-type: none;
+  align-self: start;
+  justify-self: start;
+}
+
+.footer-title {
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid white;
+  line-height: 1.5;
+}
+
+.socials {
+  display: flex;
+  gap: 1rem;
+  padding-top: 0.45rem;
 }/*# sourceMappingURL=style.css.map */

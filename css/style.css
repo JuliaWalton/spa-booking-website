@@ -655,7 +655,6 @@ nav {
 
 .faq-center {
   height: 650px;
-  margin-bottom: 3rem;
 }
 
 .faq-question {
@@ -722,8 +721,8 @@ nav {
   margin: auto;
   place-content: center;
   place-items: center;
-  margin-block: 4rem;
-  margin-block: clamp(4rem, 3.2rem + 4vw, 8rem);
+  margin-block: 3rem;
+  margin-block: clamp(2rem, 2.2rem + 4vw, 8rem);
   position: relative;
   max-width: 1800px;
 }

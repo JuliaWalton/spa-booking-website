@@ -1,0 +1,123 @@
+<article class="booking">
+    <!-- <h2>Book Online</h2> -->
+    <div class="booking-bg">
+        <!-- <img src="images/monstera.png" alt=""> -->
+    </div>
+    <div class="booking-bg2">
+        <!-- <img src="images/monstera.png" alt=""> -->
+    </div>
+    <form class="form" data-multi-step>
+
+        <div class="form-card" data-step>
+            <h3 class="step-title">Make a Reservation</h3>
+            <div class="form-group">
+                <label for="guests">How many guests?</label>
+                <input type="number" id="guests" name="booking" min="1" max="10" placeholder="Number of Guests">
+                <!-- https://stackoverflow.com/questions/44860250/browser-validation-message-min-max -->
+            </div>
+            <div class="form-group">
+                <!-- https://stackoverflow.com/questions/7488968/html-css-nested-options-in-a-select-field -->
+                <!-- https://stackoverflow.com/questions/4480637/how-to-change-a-selections-options-based-on-another-select-option-selected -->
+                <!-- https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/change_event -->
+                <label for="service">What can we do for you?</label>
+                <div class="form-flex">
+                    <select type="list" id="service" name="booking">
+                        <option value="">--Select a Service--</option>
+                        <option value="item1">massage</option>
+                        <option value="item2">skincare</option>
+                        <option value="item3">haircare</option>
+                        <option value="item4">gentlemen</option>
+                        <option value="item5">Packages</option>
+                    </select>
+
+                    <select type="list" id="service-specify" name="booking">
+                        <option value="">--specify a type--</option>
+                        <!-- <option value="massage1">fire and ice massage</option>
+                                                    <option value="massage2">prenatal massage</option>
+                                                    <option value="massage3">couples massage</option> -->
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="employee">With Whom?</label>
+                <select type="list" id="person" name="booking">
+                    <option value="">--anyone--</option>
+                    <optgroup label="Female Staff">
+                        <option value="person3">Amanda</option>
+                        <option value="person1">Brandy</option>
+                        <option value="person1">Chloe</option>
+                        <option value="person1">Emily</option>
+                        <option value="person3">Kimmy</option>
+                        <option value="person2">Leah</option>
+                        <option value="person3">Sophia</option>
+                    </optgroup>
+                    <optgroup label="Male Staff">
+                        <option value="person3">Daniel</option>
+                        <option value="person1">Ethan</option>
+                        <option value="person1">Steven</option>
+                    </optgroup>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="date">When?</label>
+                <input type="date" id="date" name="booking" placeholder="dd/mm/yyyy">
+            </div>
+            <div class="form-group">
+                <label for="time">Preferred Time?</label>
+                <select type="list" id="time" name="booking">
+                    <option value="">--anytime--</option>
+                    <option value="time1">morning</option>
+                    <option value="time2">mid-morning</option>
+                    <option value="time3">afternoon</option>
+                    <option value="time4">mid-afternoon</option>
+                </select>
+            </div>
+            <button class="form-next-btn" type="button" data-next>Next</button>
+        </div>
+        <div class="form-card" data-step>
+            <h3 class="step-title">Create Your Account</h3>
+            <div class="form-group">
+                <label for="fname">First Name</label>
+                <input type="text" name="contact" id="fname" placeholder="Enter First Name">
+            </div>
+            <div class="form-group">
+                <label for="lname">Last Name</label>
+                <input type="text" name="contact" id="lname" placeholder="Enter Last Name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="contact" id="email" placeholder="Enter Email">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input required type="password" oninvalid="" name="contact" id="password" placeholder="Enter Password">
+            </div>
+            <div class="form-group">
+                <label for="password2">Password Confirm</label>
+                <input required type="password" name="contact" id="password2" placeholder="Repeat Your Password">
+            </div>
+            <div class="btn-container">
+                <button class="form-prev-btn" type="button" data-previous>Previous</button>
+                <button class="submit-btn" type="submit" data-submit>Submit</button>
+            </div>
+        </div>
+        <div class="form-card" data-step>
+            <div class="success-msg">
+                <h4 class="success-title">Thank you for booking at Spa Selene!</h4>
+                <img width="300px"
+                    src="images/pngtree-golden-buddhist-sculpture-ornament-statue-three-dimensional-3d-thai-religious-decorative-png-image_13249231.png"
+                    alt="">
+                <p class="success-text">A confirmation email has been sent to sdkfsfdk@gmail.com</p>
+                <p class="success-desc">Please feel free to arrive early to your appointment and take advantage of our
+                    pool, hot tub, steam sauna, and lounge!</p>
+                <div class="btn-container">
+                    <button class="form-prev-btn" type="button" data-previous>Previous</button>
+                    <button class="form-submit-btn" type="submit" data-submit>Submit</button>
+                </div>
+            </div>
+            <!-- if they selected morning, say Shayne is available at 8, 10 -->
+            <!-- <button type="button">New customer</button>
+                                        <button type="button">Returning customer</button> -->
+        </div>
+    </form>
+</article>

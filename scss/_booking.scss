@@ -4,8 +4,8 @@
     place-content: center;
     place-items: center;
 
-    margin-block: 4rem;
-    margin-block: clamp(4rem, 3.2rem + 4vw, 8rem);
+    margin-block: 3rem;
+    margin-block: clamp(2rem, 2.2rem + 4vw, 8rem);
     position: relative;
     max-width: 1800px;
 }
@@ -18,7 +18,7 @@
     height: 700px;
     bottom: 20px;
     left: -70px;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; 
     background-size: 100%;
     // background-color: purple;
     z-index: -5;

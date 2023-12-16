@@ -24,6 +24,14 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+html,
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  overflow: auto;
+}
 /*
   5. Improve media defaults
 */
@@ -58,4 +66,47 @@ h4,
 h5,
 h6 {
     overflow-wrap: break-word;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+// ::-webkit-scrollbar {
+//   overflow-y: scroll;
+// }
+
+/*** Works on common browsers ***/
+::selection {
+  background-color: rgb(216, 56, 123);
+  color: #fff;
+}
+
+/*** Mozilla based browsers ***/
+::-moz-selection {
+  background-color: rgb(216, 56, 123);
+  color: #fff;
+}
+
+/***For Other Browsers ***/
+::-o-selection {
+  background-color: rgb(216, 56, 123);
+  color: #fff;
+}
+
+::-ms-selection {
+  background-color: rgb(216, 56, 123);
+  color: #fff;
+}
+
+/*** For Webkit ***/
+::-webkit-selection {
+  background-color: rgb(216, 56, 123);
+  color: #fff;
 }

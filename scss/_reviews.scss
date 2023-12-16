@@ -4,29 +4,71 @@
     align-items: center;
     text-align: center;
     // background-color: pink;
-    padding-block: 2rem;
+    padding-bottom: 7rem;
 }
 
 .title {
+    padding-bottom: 1rem;
     font-size: 2rem;
-}
-
-.img-container {
-    width: 200px;
-    border-radius: 50%;
-    aspect-ratio: 1/1;
-    object-fit: cover;
 }
 
 .review {
     display: grid;
     justify-items: center;
     gap: 1rem;
-    background-color: aliceblue;
+    // background-color: rgb(254, 219, 255);
+    position: relative;
+}
+
+.main-info {
+    font-size: 1.5rem;
+    // font-family: 'Playfair Display', serif;
+    background-color:rgba(224, 53, 124, 0.137);
+    padding: .5rem 1rem;
+    border-radius: .5rem;
 }
 
 .info {
     max-width: 800px;
+    min-height: 87px;
+}
+
+.author {
+    font-size: 1.3rem;
+}
+
+
+.review-btn {
+    position: absolute;
+    background: none;
+    border: none;
+    border-radius: 0;
+    font-size: 2rem;
+    // height: 100%;
+    top: 50%;
+    z-index: 5;
+    transform: translateY(-50%);
+    color: rgb(224, 53, 124);
+    cursor: pointer;
+    border-radius: .25rem;
+    padding: 0 1rem;
+    // background-color: rgba(0, 0, 0, 0.1);
+}
+
+.review-btn.next {
+    right: .01rem;
+}
+
+.review-btn.prev {
+    left: .01rem;
+}
+
+.img-container {
+    position: relative;
+    width: 200px;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
 }
 
 .person-img {
@@ -38,10 +80,29 @@
     position: relative;
 }
 
-.author {
-    font-size: 1.5rem;
+.img-container::after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 1.3rem;
+    content: "\f10e";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3rem;
+    height: 3rem;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    transform: translateY(25%);
+    background: rgb(224, 53, 124);
+    color:black;
 }
 
-.reviews .btn {
-    background-color: rgb(255, 183, 245);
+.stars {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    max-width: 100px;
+    padding-top: .4rem;
+    // gap: .5rem;
 }

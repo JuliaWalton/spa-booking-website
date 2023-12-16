@@ -4,7 +4,9 @@ footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1.5fr;
     align-items: start;
-    padding: 2rem 5rem 5rem;
+    gap: 1rem;
+    padding-block: 2rem 5rem;
+    padding-inline:clamp(1rem, 0.19999999999999996rem + 4vw, 5rem);
 }
 
 footer img {
@@ -35,3 +37,5 @@ footer a {
     gap: 1rem;
     padding-top: .45rem;
 }
+
+// @media  

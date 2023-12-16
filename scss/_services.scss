@@ -1,38 +1,58 @@
-.treatments-content {
-    margin: 1rem 6rem;
-}
-
-
+// .treatments-content {
+//     margin: 1rem 6rem;
+// }
 
 .massages{
     background: url('/images/unsplash/palm.png');
-    background-position: 105% 120%;
+    background-position: -90;
 }
 
 .skincare {
     background: url('/images/unsplash/pexels-anna-shvets-3851556.png');
-    background-position: 100% 100%;
+    background-position: 95% 80%;
 }
 
 .haircare {
     background: url('/images/unsplash/haircare.png');
-    background-position: 95% 180%;
+    background-position: 95% 20%;
 }
 
 .gentlemen {
     background: url('/images/unsplash/skincare.png');
-    background-position: 105% 220%;
+    background-position: -220%;
 }
 
 .packages {
     background: url('/images/unsplash/gift.png');
-    background-position: 99% 120%;
+    background-position: 20% 10%;
 }
-.treatments {
-    background-repeat: no-repeat;
-    background-size: 40%;
-    height: 100%;
+// .treatments {
+//     // background-repeat: no-repeat;
+//     // background-size: 30%;
+//     // width: 100%;
+//     // position: fixed;
+//     // height: 100vh;
+//     // display: grid;
+// }
+
+.treatments-group {
     display: grid;
+    grid-template-columns: auto 1fr;
+    // background-color: pink;
+    position: relative;
+
+}
+
+.wrapper {
+    position: absolute;
+    bottom: 0;
+    right:0;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 600px;
+    height: 400px;
+    // background-color: purple;
+    z-index: -5;
 }
 
 .treatments-explore {
@@ -50,13 +70,19 @@
 }
 
 .treatments-btn-container {
-    display: flex;
-    gap: 5rem;
-    padding-block: 1.5rem 1rem;
+    // margin-top: 2rem;
+    // margin-left: 1rem;
+    padding-left: 1rem;
+    display: grid;
+    // gap: 5rem;
+    padding-top: 2rem;
     // background-color: red;
     align-items: center;
     justify-content: center;
     font-size: 1rem;
+    // border: 1px solid black;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
 }
 
 .filter-btn {
@@ -70,8 +96,10 @@
 
 .filter-btn.active {
     text-decoration: underline;
-    background-color: rgba(218, 165, 32, 0.719);
-    border-radius: 1rem;
+    // background-color: rgb(199, 169, 2);
+    background-color: rgb(216, 56, 123);
+    color:white;
+    // border-radius: 1rem;
 }
 
 .black-line {
@@ -84,8 +112,10 @@
     grid-template-columns: repeat(3, 1fr);
     // background-color: red;
     gap: 2rem;
+    padding: 1rem;
+    padding: clamp(1rem, 0.6rem + 2vw, 3rem);
     min-height: 500px;
-    margin-bottom: 3.5rem;
+    // margin-bottom: 3.5rem;
 }
 
 .option {
@@ -94,8 +124,11 @@
     align-content: start;
     gap: 1rem;
     border: 1px solid black;
-    padding: 1.5rem 2rem;
-    transition: .5s ease-in;
+    padding: 1rem;
+    padding: clamp(1rem, 0.8rem + 1vw, 2rem);
+    transition: .2s ease-in;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(.5rem);
 }
 
 .option .price {
@@ -103,14 +136,81 @@
     align-self: end;
 }
 
-.option:hover {
-    background-color: rgba(218, 165, 32, 0.527);
-}
+// .option:hover {
+//     background-color: rgba(218, 165, 32, 0.527);
+// }
 
 .option h4 {
     text-transform: uppercase;
 }
 
 .option p {
-    font-size: 1rem;
+    font-size: .8rem;
+    
+    
+}
+
+// .option p:nth-child(2) {
+//     color: red;
+//     max-height: 120px;
+//     overflow: scroll;
+// }
+
+// *****************************
+// circle mouse move 
+// *****************************
+.option {
+    --left: 0px;
+    --top: 0px;
+
+    /* background-color: pink; */
+    /* z-index: -100; */
+    border: 1px solid black;
+    // padding: 3rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.option::before {
+    content: '';
+    // background: rgba(199, 169, 2, .3);
+    background: rgba(216, 56, 123, .3);
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+
+    position: absolute;
+    left: var(--left);
+    top: var(--top);
+    transform: translate(-50%, -50%) scale(1.5);
+    z-index: -10;
+
+    filter: blur(30px);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.option:hover::before {
+    opacity: 1;
+}
+
+@media (max-width: 1200px) {
+    .treatments-group {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows:auto 1fr;
+    }
+    .treatments-btn-container {
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 0rem;
+        // flex-direction: column;
+    }
+
+}
+
+@media (max-width: 900px) {
+    .content {
+            grid-template-columns: auto;
+        }
 }

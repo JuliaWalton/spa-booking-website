@@ -50,7 +50,6 @@ const content = document.querySelector('.content')
 const btnContainer = document.querySelector('.treatments-btn-container');
 const filterBtns = document.querySelectorAll('.filter-btn');
 const bgImgContainer = document.querySelector('.treatments-background-img');
-const cards = document.querySelectorAll('.option');
 
 function displayItems(array) {
     let menuDisplay = array.map((item) => {
@@ -67,6 +66,7 @@ function displayItems(array) {
     menuDisplay = menuDisplay.join('');
     content.innerHTML = menuDisplay;
 
+    const cards = document.querySelectorAll('.option');
     // trailing circle for card on mouse hover
     cards.forEach((card) => {
         console.log(card)
@@ -91,7 +91,6 @@ btnContainer.addEventListener('click', (e) => {
     .then(data => {
         // console.log(data);
         const treatmentMenu = data;
-
         const keyword = e.target.dataset.orange;
         // console.log(keyword)
         if (keyword) {
@@ -128,7 +127,7 @@ window.addEventListener('DOMContentLoaded', (e) => {
         const treatmentMenu = data;
 
         content.innerHTML = treatmentMenu.map((item) => {
-            if (item.category === 'massages') {
+            if (item.category === 'skincare') {
                 bgImgContainer.className = `treatments-background-img ${item.category}`;
                 console.log(item);
                 return `<div class="option">
@@ -140,7 +139,6 @@ window.addEventListener('DOMContentLoaded', (e) => {
             }}).join('');
         
         const cards = document.querySelectorAll('.option');
-
         cards.forEach((card) => {
             // console.log(card)
             card.addEventListener('mousemove', (e) => {
@@ -463,7 +461,7 @@ const reviews = [
         "name": 'Mateo Urdiales',
         "job": 'product manager',
         "title": 'Great Service, Awesome Amenitites',
-        "img": '/images/unsplash/jacinto-diego-_upgGOuAOYs-unsplash.jpg',
+        "img": '/images/man-red-shirt.jpg',
         "text": 'My wife and I jump to come here whenever we can find a babysitter. Their deep tissue massages make me feel like a new man. Don\'t disregard their haircut services either. Sophia always provides me a great cut with great conversation.',
     },
     {
@@ -471,7 +469,7 @@ const reviews = [
         "name": 'Sarah Forbes',
         "job": 'beauty blogger',
         "title": 'Frequent Visitor',
-        "img": '/images/unsplash/pexels-maria-orlova-4946942.jpg',
+        "img": '/images/woman-towel.jpg',
         "text":'The best spa in Dallas x10! I am a frequent local who comes just to get pampered! I always come for an 80-minute aromatherapy massage and the staff is fantastic at making me feel so relaxed and at ease. For your special occasions, be sure to book a celebrity facial with Chloe!' ,
     },
     {
@@ -479,7 +477,7 @@ const reviews = [
         "name": 'Anna Koto',
         "job": 'accountant',
         "title": 'Wonderful Experience',
-        "img": '/images/unsplash/alex-starnes-PK_t0Lrh7MM-unsplash.jpg',
+        "img": '/images/woman-yellow-jacket.jpg',
         "text": 'Had a fabulous facial with Amanda! She was caring, gentle, and knowledgeable. Spa Selene is amazing! Friendly staff, great service selections, and the spa smell is soo good! Already scheduled my next appointment!',
     },
     {
@@ -487,7 +485,7 @@ const reviews = [
         "name": 'Will Anderson',
         "job": 'buisness owner',
         "title": 'Nice Relaxing Spa',
-        "img": '/images/unsplash/philipp-wuthrich-5n3JP9WAJTs-unsplash.jpg',
+        "img": '/images/man-white-shirt.jpg',
         "text": 'Will be back as a regular customer for sure! I had the 50-minute therapeutic massage with Kim. She gave an amazing massage. The pressure was on point, and she checked in with me a couple of times to make sure I was taken care of. ',
     }
 ];

@@ -157,7 +157,7 @@ button {
 
 .home {
   background-color: rgba(0, 0, 0, 0.1);
-  background-image: url(/images/unsplash/haley-phelps-S-llxYh3GzI-unsplash.jpg);
+  background-image: url(/images/hero-img.jpg);
   background-blend-mode: multiply;
   background-size: cover;
   background-position: 80% 40%;
@@ -449,28 +449,23 @@ nav {
   }
 }
 .massages {
-  background: url("/images/unsplash/palm.png");
-  background-position: -90;
+  background: url("/images/palm.png");
 }
 
 .skincare {
-  background: url("/images/unsplash/pexels-anna-shvets-3851556.png");
-  background-position: 95% 80%;
+  background: url("/images/skincare-womens.png");
 }
 
 .haircare {
-  background: url("/images/unsplash/haircare.png");
-  background-position: 95% 20%;
+  background: url("/images/haircare.png");
 }
 
 .gentlemen {
-  background: url("/images/unsplash/skincare.png");
-  background-position: -220%;
+  background: url("/images/mens-skincare.png");
 }
 
 .packages {
-  background: url("/images/unsplash/gift.png");
-  background-position: 20% 10%;
+  background: url("/images/gift.png");
 }
 
 .treatments-group {
@@ -624,7 +619,7 @@ nav {
   text-align: center;
   padding-block: 2rem;
   padding-block: clamp(2rem, 1.2rem + 4vw, 6rem);
-  background: url("/images/unsplash/orchid.png");
+  background: url("/images/orchid.png");
   background-repeat: no-repeat;
   background-size: 40%;
   background-position: -5% 60%;

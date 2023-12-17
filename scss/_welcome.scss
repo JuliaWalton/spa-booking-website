@@ -2,7 +2,6 @@
 // initial setup styling  
 // *******************************************
 .home {
-    color: white;
     background-color: rgba(0, 0, 0, 0.1);
     background-image: url(/images/unsplash/haley-phelps-S-llxYh3GzI-unsplash.jpg);
     background-blend-mode: multiply;
@@ -10,21 +9,14 @@
     background-position: 80% 40%;
     background-repeat: no-repeat;
 
+    color: white;
     height: 100vh;
-    // display: grid;
-    // grid-template-rows: auto 1fr;
-    // align-items: center;
     position: relative;
-    
 }
 
-html {
-    width: 100%;
-}
 nav {
     padding: 1rem 1.5rem;
-    // align-self: start;
-    background-color: rgba(0, 0, 0, .4);
+    background-color: rgba(0, 0, 0, 0.4);
     box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(.5rem);
 }
@@ -38,24 +30,32 @@ nav {
 }
 
 .fixed {
-    transition: .5s ease-in;
-    z-index: 5000;
-    
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     background-color: rgb(0, 0, 0);
-    padding: .5rem 1.5rem;
-    
+    padding: .5rem 1.5rem;  
+    transition: .5s ease-in;
+    z-index: 1000;
+}
+
+.fixed .home-logo-img {
+    width: 100px;
 }
 
 .fixed .links a {
     font-size: .8rem;
 }
 
-.fixed .home-logo-img {
-    width: 100px;
+.links a {
+    display: block;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    color: rgb(255, 255, 255);
 }
 
 .links-container {
@@ -63,23 +63,9 @@ nav {
     padding-top: 2rem;
 }
 
-.links a {
-    /* background: white; */
-    color: rgb(255, 255, 255);
-    font-size: 1.1rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    display: block;
-    // font-weight: bold;
-    padding:.5rem;
-    margin-bottom: 1rem;
-}
-
 .links-container.show-links {
     display: grid;
     align-items: center;
-    // justify-content: start;
-    // padding-top: 1rem;
 }
 
 .nav-toggle {
@@ -89,34 +75,20 @@ nav {
     font-size: 2rem;
     display: block;
     cursor: pointer;
-    // background-color: rgba(0, 0, 0, 0.3);
-    // box-shadow: 0 0 40px 40px rgba(0, 0, 0, 0.3);
 }
 
-// .nav .nav-close-btn {
-//     display: none;
-//     color: inherit;
-//     font-size: 2.35rem;
-//     cursor: pointer;
-// }
+.links a:hover {
+    text-decoration: underline;
+}
 
+.links-reserve-btn {
+    background-color: rgb(216, 56, 123);
+    max-width: max-content; 
+}
 
-// .links {
-//     display: flex;
-//     gap: 1rem;
-//     padding: 0;
-//     margin: 0;
-// }
-
-.links a:hover {text-decoration: underline;}
-.links-reserve-btn {background-color: rgb(216, 56, 123); max-width: max-content; }
-.links-reserve-btn:hover {background-color: black;}
-
-// .home-logo-img:hover,
-// .home-logo-img:focus {
-//     transform: scale(1.1);
-//     transition: .2s ease-in;
-// }
+.links-reserve-btn:hover {
+    background-color: rgb(255, 105, 175);
+}
 
 .nav-toggle:hover,
 .nav-toggle:focus {
@@ -130,12 +102,9 @@ nav {
     transition: .2s ease-in;
 }
 
-
 @media screen and (min-width: 900px) {
-
     .nav-header {
         width: 100%;
-        /* padding: 0; */
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -156,32 +125,15 @@ nav {
     }
 
     .links a {
-        // background: transparent;
         color: white;
         font-size: 1.1rem;
         text-transform: uppercase;
         letter-spacing: 2px;
         display: block;
         transition: .3s ease-in-out;
-        /* margin: 0 1rem; */
-        // font-weight: bold;
-        // padding: 0;
         margin-bottom: 0;
     }
-
-    .links a:hover {
-        color: var(--clr-white);
-    }
-    // .links-reserve-btn {
-    //     background-color: rgb(216, 56, 123);
-    //     // padding: 5rem;
-    // }
-
-    // .links-reserve-btn:hover {
-    //     background-color: black;
-    // }
 }
-
 
 // **************
 // banner styling  
@@ -190,7 +142,6 @@ nav {
 .banner {
     display: grid;
     align-items: center;
-    // text-align: center;
     min-height: 100vh;
     margin-left: clamp(1rem, -1.66rem + 8.511vw, 6rem);
 }
@@ -211,20 +162,6 @@ nav {
     line-height: 1;
 }
 
-.banner-description {
+.banner-container .description-text {
     max-width: 600px;
-}
-
-.banner-book-btn {
-    background-color: black;
-    padding: .8rem 1.5rem;
-    justify-self: start;
-    font-size: 1.3rem;
-    text-transform: capitalize;
-    letter-spacing: .9px;
-    color: inherit;
-}
-
-.banner-book-btn:hover {
-    background-color:rgb(216, 56, 123);
 }

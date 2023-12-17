@@ -4,12 +4,13 @@
     align-items: center;
     text-align: center;
     // background-color: pink;
-    padding-bottom: 7rem;
+    
+    padding-bottom: clamp(0rem, -1.4000000000000001rem + 7.000000000000001vw, 7rem);
 }
 
 .title {
     padding-bottom: 1rem;
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 .review {
@@ -20,15 +21,13 @@
     position: relative;
 }
 
-.main-info {
-    font-size: 1.5rem;
-    // font-family: 'Playfair Display', serif;
+.review .minor-header {
     background-color:rgba(224, 53, 124, 0.137);
     padding: .5rem 1rem;
     border-radius: .5rem;
 }
 
-.info {
+.review .description-text {
     max-width: 800px;
     min-height: 87px;
 }

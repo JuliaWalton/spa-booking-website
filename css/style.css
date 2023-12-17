@@ -118,20 +118,53 @@ button {
   border: none;
 }
 
+.buttons {
+  background-color: black;
+  padding: 0.8rem 1.5rem;
+  justify-self: start;
+  font-size: 0.75rem;
+  font-size: clamp(0.75rem, 0.65rem + 0.5vw, 1.1rem);
+  text-transform: capitalize;
+  letter-spacing: 0.9px;
+  color: inherit;
+}
+
+.buttons:hover {
+  background-color: rgb(216, 56, 123);
+}
+
+.description-text {
+  font-size: 0.75rem;
+  font-size: clamp(0.75rem, 0.65rem + 0.5vw, 1.25rem);
+}
+
+.minor-header {
+  font-size: 1.25rem;
+  font-size: clamp(1.25rem, 1.2rem + 0.25vw, 1.5rem);
+}
+
+.primary-header {
+  font-size: 1.8rem;
+  font-size: clamp(1.8rem, 1.56rem + 1.2vw, 3rem);
+  font-weight: 900;
+  font-family: "Playfair Display", serif;
+  letter-spacing: 2px;
+}
+
+.basic-header {
+  font-size: 3rem;
+}
+
 .home {
-  color: white;
   background-color: rgba(0, 0, 0, 0.1);
   background-image: url(/images/unsplash/haley-phelps-S-llxYh3GzI-unsplash.jpg);
   background-blend-mode: multiply;
   background-size: cover;
   background-position: 80% 40%;
   background-repeat: no-repeat;
+  color: white;
   height: 100vh;
   position: relative;
-}
-
-html {
-  width: 100%;
 }
 
 nav {
@@ -150,38 +183,37 @@ nav {
 }
 
 .fixed {
-  transition: 0.5s ease-in;
-  z-index: 5000;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   background-color: rgb(0, 0, 0);
   padding: 0.5rem 1.5rem;
-}
-
-.fixed .links a {
-  font-size: 0.8rem;
+  transition: 0.5s ease-in;
+  z-index: 1000;
 }
 
 .fixed .home-logo-img {
   width: 100px;
 }
 
-.links-container {
-  display: none;
-  padding-top: 2rem;
+.fixed .links a {
+  font-size: 0.8rem;
 }
 
 .links a {
-  /* background: white; */
-  color: rgb(255, 255, 255);
-  font-size: 1.1rem;
+  display: block;
+  font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 2px;
-  display: block;
   padding: 0.5rem;
   margin-bottom: 1rem;
+  color: rgb(255, 255, 255);
+}
+
+.links-container {
+  display: none;
+  padding-top: 2rem;
 }
 
 .links-container.show-links {
@@ -208,7 +240,7 @@ nav {
 }
 
 .links-reserve-btn:hover {
-  background-color: black;
+  background-color: rgb(255, 105, 175);
 }
 
 .nav-toggle:hover,
@@ -226,7 +258,6 @@ nav {
 @media screen and (min-width: 900px) {
   .nav-header {
     width: 100%;
-    /* padding: 0; */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -249,11 +280,7 @@ nav {
     letter-spacing: 2px;
     display: block;
     transition: 0.3s ease-in-out;
-    /* margin: 0 1rem; */
     margin-bottom: 0;
-  }
-  .links a:hover {
-    color: var(--clr-white);
   }
 }
 .banner {
@@ -279,32 +306,18 @@ nav {
   line-height: 1;
 }
 
-.banner-description {
+.banner-container .description-text {
   max-width: 600px;
 }
 
-.banner-book-btn {
-  background-color: black;
-  padding: 0.8rem 1.5rem;
-  justify-self: start;
-  font-size: 1.3rem;
-  text-transform: capitalize;
-  letter-spacing: 0.9px;
-  color: inherit;
-}
-
-.banner-book-btn:hover {
-  background-color: rgb(216, 56, 123);
-}
-
 .about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
   padding-block: 1rem;
   padding-block: clamp(1rem, -0.2rem + 6vw, 7rem);
   padding-inline: 1rem;
   padding-inline: clamp(1rem, 0.2rem + 4vw, 5rem);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
 }
 
 .about-text-hours {
@@ -313,70 +326,44 @@ nav {
 
 .about-text {
   display: grid;
-  gap: 1rem;
+  gap: 0.5rem;
   justify-self: center;
   align-self: center;
   max-width: 800px;
 }
 
-.about-title {
-  padding-bottom: 1.5rem;
+.about-main {
+  padding-bottom: 1rem;
+  display: grid;
+  gap: clamp(0.5rem, 0.4rem + 0.5vw, 1rem);
 }
 
-.about-title h2 {
-  font-family: "Playfair Display", serif;
-  font-weight: 900;
-  font-size: 2rem;
-  font-size: clamp(2rem, 1.6rem + 2vw, 4rem);
+.about-main .primary-header {
   max-width: 700px;
 }
 
-.about-title small {
-  justify-self: end;
-  margin-right: 3rem;
+.about-btn-container {
+  display: flex;
+  gap: 1rem;
 }
 
 .about-text-hours {
   text-align: center;
-  padding-block: 0.5rem;
 }
 
 .schedule {
-  margin-top: 1rem;
   display: flex;
   gap: 4rem;
   justify-content: center;
+  margin-top: 1rem;
 }
 
 .hours {
   font-style: italic;
 }
 
-.about-btn-container {
-  display: flex;
-  gap: 1rem;
-  font-size: 0.75rem;
-  font-size: clamp(0.75rem, 0.65rem + 0.5vw, 1.25rem);
-}
-
-.book-btn {
-  background-color: rgb(224, 53, 124);
-  justify-self: start;
-  padding: 0.8rem 1.25rem;
+.about-btn-container .buttons {
   color: white;
-}
-
-.learn-btn {
-  background-color: black;
-  justify-self: start;
-  padding: 0.8rem 2.45rem;
-  margin: 0;
-  color: white;
-}
-
-.book-btn:hover,
-.learn-btn:hover {
-  background: linear-gradient(black, rgb(224, 53, 124));
 }
 
 .carousel {
@@ -390,10 +377,6 @@ nav {
   margin: 0;
   padding: 0;
   list-style-type: none;
-}
-
-.about-text-hours {
-  margin-top: 1rem;
 }
 
 .slide {
@@ -496,7 +479,7 @@ nav {
   position: relative;
 }
 
-.wrapper {
+.treatments-background-img {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -513,27 +496,29 @@ nav {
   align-self: center;
 }
 
-.treatments-explore h3 {
-  font-family: "Playfair Display", serif;
+.treatments-explore .primary-header {
   color: white;
   text-align: center;
-  font-size: 2.5rem;
   letter-spacing: 3px;
 }
 
 .treatments-btn-container {
-  padding-left: 1rem;
   display: grid;
-  padding-top: 2rem;
+  gap: 1.25rem;
+  gap: clamp(1.25rem, 1.15rem + 0.5vw, 1.75rem);
   align-items: center;
   justify-content: center;
-  font-size: 1rem;
   grid-template-columns: auto;
   grid-template-rows: auto;
+  padding-left: 1rem;
+  padding-top: 2rem;
+  font-size: 1rem;
 }
 
 .filter-btn {
   padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .filter-btn:hover,
@@ -563,15 +548,15 @@ nav {
 
 .option {
   display: grid;
+  gap: 1rem;
   grid-template-rows: auto auto 1fr;
   align-content: start;
-  gap: 1rem;
   border: 1px solid black;
   padding: 1rem;
   padding: clamp(1rem, 0.8rem + 1vw, 2rem);
-  transition: 0.2s ease-in;
   background: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(0.5rem);
+  transition: 0.2s ease-in;
 }
 
 .option .price {
@@ -590,8 +575,6 @@ nav {
 .option {
   --left: 0px;
   --top: 0px;
-  /* background-color: pink; */
-  /* z-index: -100; */
   border: 1px solid black;
   position: relative;
   overflow: hidden;
@@ -635,20 +618,19 @@ nav {
   }
 }
 .faq {
-  padding-block: 2rem;
-  padding-block: clamp(2rem, 1.2rem + 4vw, 6rem);
   display: grid;
   align-items: center;
   justify-content: center;
   text-align: center;
+  padding-block: 2rem;
+  padding-block: clamp(2rem, 1.2rem + 4vw, 6rem);
   background: url("/images/unsplash/orchid.png");
   background-repeat: no-repeat;
   background-size: 40%;
   background-position: -5% 60%;
 }
 
-.faq-center h2 {
-  font-size: 3rem;
+.faq-center .basic-header {
   text-transform: uppercase;
   padding: 1rem;
 }
@@ -676,15 +658,17 @@ nav {
   display: flex;
   justify-content: space-between;
   font-weight: 700;
-  font-family: "playfair display";
+  font-family: "Playfair display", "serif";
   letter-spacing: 2px;
 }
 
 .faq-question-text {
-  padding: 0rem 2rem 2rem 2rem;
-  text-align: left;
   display: none;
   max-width: 800px;
+  text-align: left;
+  padding: 0rem 2rem 2rem 2rem;
+  font-size: 0.75rem;
+  font-size: clamp(0.75rem, 0.65rem + 0.5vw, 1.25rem);
 }
 
 .faq-question.show-answer .faq-question-text {
@@ -701,13 +685,13 @@ nav {
 }
 
 .faq-question.show-answer {
-  border: 1px solid rgb(199, 169, 2);
-  color: rgb(185, 158, 6);
-  background-color: rgb(245, 239, 201);
+  border: 1px solid rgb(216, 56, 123);
+  color: rgb(216, 56, 123);
+  background-color: rgb(255, 230, 240);
 }
 
 .faq-question.show-answer .faq-question-btn {
-  color: rgb(179, 152, 4);
+  color: rgb(216, 56, 123);
 }
 
 @media (max-width: 800px) {
@@ -802,7 +786,6 @@ select {
   gap: 1rem;
 }
 
-/* active class toggle */
 .form-card.active {
   display: grid;
 }
@@ -823,18 +806,13 @@ select {
 }
 
 .form-group > small {
-  /* visibility: hidden; */
   font-weight: bold;
   color: rgb(182, 31, 94);
-  /* background-color: rgb(32, 32, 32); */
   padding: 0.2rem;
-  /* align-content: start; */
-  /* max-width: min-content; */
   display: none;
 }
 
 .form-group.error > small {
-  /* visibility: visible; */
   display: inline-block;
 }
 
@@ -890,15 +868,12 @@ select {
   padding-inline: 5px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 700px) {
   .booking-bg {
     background-image: none;
   }
   .booking-bg2 {
     background-image: none;
-  }
-  .booking {
-    padding-top: 10rem;
   }
 }
 .reviews {
@@ -906,12 +881,12 @@ select {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding-bottom: 7rem;
+  padding-bottom: clamp(0rem, -1.4rem + 7vw, 7rem);
 }
 
 .title {
   padding-bottom: 1rem;
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 .review {
@@ -921,14 +896,13 @@ select {
   position: relative;
 }
 
-.main-info {
-  font-size: 1.5rem;
+.review .minor-header {
   background-color: rgba(224, 53, 124, 0.137);
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
 }
 
-.info {
+.review .description-text {
   max-width: 800px;
   min-height: 87px;
 }

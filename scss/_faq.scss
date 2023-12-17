@@ -1,81 +1,67 @@
+// *******************
+// FAQ section styling
+// *******************
+
 .faq {
-    padding-block: 2rem;
-    padding-block: clamp(2rem, 1.2rem + 4vw, 6rem);
-    // margin-bottom: 8rem;
     display: grid;
     align-items: center;
     justify-content: center;
     text-align: center;
+    padding-block: 2rem;
+    padding-block: clamp(2rem, 1.2rem + 4vw, 6rem);
+
     background: url('/images/unsplash/orchid.png');
     background-repeat: no-repeat;
     background-size: 40%;
     background-position: -5% 60%;
-    // height: 100vh;
 }
 
-.faq-center h2 {
-    font-size: 3rem;
+.faq-center .basic-header{
     text-transform: uppercase;
     padding: 1rem;
-
 }
 
 .faq-center {
     height: 650px;
-    // margin-left: clamp(0rem, -2.8rem + 19vw, 20rem);
 }
-
 
 .faq-question {
     border: 1px solid black;
-    // background-color: rgb(255, 192, 192);
     margin: 1rem;
-    // font-size: 25rem;
     width: 19rem;
     width: clamp(19rem, 12.8rem + 31vw, 50rem);
     background-color: white;
-    
 }
 
 .faq-question-title p {
     font-size: 1.2rem;
-        font-size: clamp(1.2rem, 1.04rem + 0.8vw, 2rem);
-    // padding: 0.8rem;
-    // padding: clamp(0.8rem, 2.24rem + -1.2vw, 2rem);
+    font-size: clamp(1.2rem, 1.04rem + 0.8vw, 2rem);
     padding: 2rem;
     text-align: start;
 }
 
 .faq-question-title {
     display: flex;
-    // gap: 45rem;
     justify-content: space-between;
     font-weight: 700;
-    font-family: 'playfair display';
+    font-family: 'Playfair display', 'serif';
     letter-spacing: 2px;
 }
 
 .faq-question-text {
-    padding: 0rem 2rem 2rem 2rem;
-    text-align: left;
-    // margin-top: 2rem;
     display: none;
     max-width: 800px;
+    text-align: left;
+    padding: 0rem 2rem 2rem 2rem;
+    font-size: 0.75rem;
+    font-size: clamp(0.75rem, 0.65rem + 0.5vw, 1.25rem);
 }
-
-
-// how to do a SASS conditional statement to say if the show-answer class is on for an FAQ question, I want to add a margin-bottom: 10rem to the main FAQ article?
-// if (.show-answer ) .faq {
-//     margin-bottom: 10rem;
-// }
 
 .faq-question.show-answer .faq-question-text {
     display: flex;
 }
 
 .faq-question-btn {
-    // padding: 0.8rem;
-    // padding: clamp(0.8rem, 2.24rem + -1.2vw, 2rem);
     padding: 2rem;
     transition: 90ms ease-in;
 }
@@ -85,18 +71,17 @@
 }
 
 .faq-question.show-answer {
-    border: 1px solid rgb(199, 169, 2);
-    color:rgb(185, 158, 6);
-    background-color: rgb(245, 239, 201);
+    border: 1px solid rgb(216, 56, 123);
+    color:rgb(216, 56, 123);
+    background-color: rgb(255, 230, 240);
 }
 
 .faq-question.show-answer .faq-question-btn {
-    color: rgb(179, 152, 4);
+    color: rgb(216, 56, 123);
 }
 
 @media (max-width: 800px) {
     .faq {
-        // background: none;
         background-size: 40%;
         background-position: -5% -5%;
     }

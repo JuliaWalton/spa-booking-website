@@ -1,0 +1,178 @@
+[
+  {
+    "id": 1,
+    "category": "massages",
+    "title": "FIRE & ICE STONE CBD MASSAGE",
+    "desc": "This stimulating massage with CBD oil uses a combination of cool jade stones and warm volcanic stones to rejuvenate and relieve deep muscle tension. The cooling effects of jade reduce inflammation, while the warm stones ease muscles and soothe aches and pains.",
+    "time": "50 / 80 / 100 MINUTES",
+    "price": "$190 / $250 / $300.00"
+  },
+  {
+    "id": 2,
+    "category": "massages",
+    "title": "THERAPEUTIC MASSAGE",
+    "desc": "Combat the effects of stress and overuse with medium to firm pressure and deep tissue techniques to soothe long standing or repetitive stress.",
+    "time": "50 / 80 / 100 MINUTES",
+    "price": "$80 / $120 / $180.00"
+  },
+  {
+    "id": 3,
+    "category": "massages",
+    "title": "AROMATHERAPY MASSAGE",
+    "desc": "Let your senses be your guide to decide what is needed by choosing from aromatic blends of essential oils. Whether you are looking for stress relief, sinus relief, or an uplifting massage, we will take you on a journey with Red Flower’s Aromatherapy Blends.",
+    "time": "50 / 80 / 100 MINUTES",
+    "price": "$100 / $150 / $200.00"
+  },
+  {
+    "id": 4,
+    "category": "massages",
+    "title": "PRENATAL MASSAGE",
+    "desc": "A massage personalized to your pregnancy helping you find comfort and a few moments of pure pampering.",
+    "time": "50 / 80 / 100 MINUTES",
+    "price": "$150 / $220 / $290.00"
+  },
+  {
+    "id": 5,
+    "category": "massages",
+    "title": "DEEP TISSUE MASSAGE",
+    "desc": "Target chronic tension with one of our most popular massages of all time. This massage works to realign the deeper layers of muscles and connective tissues to improve not only how you feel but has positive impacts on systolic, diastolic, and arterial blood pressure.",
+    "time": "50 / 80 / 100 MINUTES",
+    "price": "$190 / $250 / $380.00"
+  },
+  {
+    "id": 6,
+    "category": "skincare",
+    "title": "hydrating & brightening facial",
+    "desc": "This regenerating and lifting facial utilizes hyaluronic acid patches. Known for its immediate ability to plump and hydrate the skin and visibly treat wrinkles, it provides a noninvasive alternative to conventional fillers.",
+    "time": "50 MINUTES",
+    "price": "$130"
+  },
+  {
+    "id": 7,
+    "category": "skincare",
+    "title": "texture balance facial",
+    "desc": "A blend of salicylic acid, resorcinol, and lactic acid in combination with powerful antioxidants, correcting peptides and plant-derived stem cells for maximum effective skin resurfacing.",
+    "time": "50 MINUTES",
+    "price": "$150"
+  },
+  {
+    "id": 8,
+    "category": "skincare",
+    "title": "pore extraction and acne facial",
+    "desc": "This treatment begins with a deep cleanse, a gentle exfoliation and extraction of impurities.  Two treatment masks will be applied to purify and nourish the skin.",
+    "time": "50 MINUTES",
+    "price": "$190"
+  },
+  {
+    "id": 9,
+    "category": "skincare",
+    "title": "anti-aging red LED therapy",
+    "desc": "A revolutionary low-level light therapy mask, is clinically proven to rejuvenate skin and improve the most problematic skin conditions. The skin is exposed to wavelengths of light to reduce fine lines and wrinkles, boost collagen, treat acne, promote wound healing, and improve skin tone.",
+    "time": "50 MINUTES",
+    "price": "$255"
+  },
+  {
+    "id": 10,
+    "category": "skincare",
+    "title": "Celebrity Facial",
+    "desc": "Laser genesis and our Hydrafacial MD will have you looking like a hollywood celebrity. This  very popular facial produces immediate results with no down time for an instant glow.",
+    "time": "50 MINUTES",
+    "price": "$375"
+  },
+  {
+    "id": 11,
+    "category": "haircare",
+    "title": "SPECIAL OCCASION STYLE",
+    "desc": "Curl and style hair or pinned back for a Partial Up-Do, perfect for an evening out. ",
+    "time": "50 MINUTES",
+    "price": "$90"
+  },
+  {
+    "id": 12,
+    "category": "haircare",
+    "title": "WOMEN'S HAIR CUT",
+    "desc": "Scissor cut and style for women’s hair. Shampoo and style included.",
+    "time": "50 MINUTES",
+    "price": "$120"
+  },
+  {
+    "id": 13,
+    "category": "haircare",
+    "title": "CUT AND COLOR",
+    "desc": "Refresh your look with a new color. It's preferred to schedule an inital consultation to describe length of hair, density, and style goal with stylist.",
+    "time": "50 / 80 / 100 MINUTES",
+    "price": "$100 / $250 / $380.00"
+  },
+  {
+    "id": 14,
+    "category": "haircare",
+    "title": "BLOWOUT",
+    "desc": "Shampoo and blow out smooth for a quick and easy hair style.",
+    "time": "50 MINUTES",
+    "price": "$90"
+  },
+  {
+    "id": 15,
+    "category": "gentlemen",
+    "title": "for grooms - wedding day prep",
+    "desc": "On wedding day, everyone may be looking at the bride, but she is looking at the groom. Feel and look your best with a custom facial, deep-tissue massage, and back wax",
+    "time": "80 MINUTES",
+    "price": "$330.00"
+  },
+  {
+    "id": 16,
+    "category": "gentlemen",
+    "title": "anti-aging facial",
+    "desc": "This stimulating massage with CBD oil uses a combination of cool jade stones and warm volcanic stones. ",
+    "time": "50 MINUTES",
+    "price": "$180"
+  },
+  {
+    "id": 17,
+    "category": "gentlemen",
+    "title": "THE BEARD FACIAL",
+    "desc": "Perfect for the bearded gentleman, this customized facial includes a full skin analysis, deep cleanse, and gentle exfoliation, foaming beard massage, and volcanic mud mask, and rejuvenating beard oil treatment.",
+    "time": "50 MINUTES",
+    "price": "$140"
+  },
+  {
+    "id": 18,
+    "category": "gentlemen",
+    "title": "DEEP TISSUE SPORTS MASSAGE",
+    "desc": "This stimulating massage with CBD oil uses a combination of cool jade stones and warm volcanic stones t. ",
+    "time": "50 / 80 / 100 MINUTES",
+    "price": "$190 / $250 / $330.00"
+  },
+  {
+    "id": 19,
+    "category": "packages",
+    "title": "MOM-KNOWS-BEST PACKAGE",
+    "desc": "This stimulating massage with CBD oil uses a combination of cool jade stones and warm volcanic stones. ",
+    "time": "100 MINUTES",
+    "price": "$380.00"
+  },
+  {
+    "id": 20,
+    "category": "packages",
+    "title": "BRIDAL-PREP PACKAGE",
+    "desc": "This stimulating massage with CBD oil uses a combination of cool jade stones and warm volcanic stones to rejuvenate and relieve deep muscle tension. The cooling effects of jade reduce inflammatio. ",
+    "time": "100 MINUTES",
+    "price": "$400.00"
+  },
+  {
+    "id": 21,
+    "category": "packages",
+    "title": "COUPLES MASSAGE",
+    "desc": "This stimulating massage with CBD oil uses a combination of cool jade stones and warm volcanic stones t. ",
+    "time": "100 MINUTES",
+    "price": "$350.00"
+  },
+  {
+    "id": 22,
+    "category": "packages",
+    "title": "HUSBAND- & WIFE-TO-BE PACKAGE",
+    "desc": "This stimulating massage with CBD oil uses a combination of cool jade stones and warm volcanic stones t. ",
+    "time": "100 MINUTES",
+    "price": "$400"
+  }
+]

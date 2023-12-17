@@ -8,6 +8,42 @@ button {
     border: none;
 }
 
+.buttons {
+    background-color: black;
+    padding: .8rem 1.5rem;
+    justify-self: start;
+    font-size: 0.75rem;
+    font-size: clamp(0.75rem, 0.65rem + 0.5vw, 1.1rem);
+    text-transform: capitalize;
+    letter-spacing: .9px;
+    color: inherit;
+}
+
+.buttons:hover {
+    background-color: rgb(216, 56, 123);
+}
+
+.description-text {
+    font-size: 0.75rem;
+    font-size: clamp(0.75rem, 0.65rem + 0.5vw, 1.25rem);
+}
+
+.minor-header {
+    font-size: 1.25rem;
+    font-size: clamp(1.25rem, 1.2rem + 0.25vw, 1.5rem);
+}
+
+.primary-header {
+    font-size: 1.8rem;
+    font-size: clamp(1.8rem, 1.56rem + 1.2vw, 3rem);
+    font-weight: 900;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 2px;
+}
+
+.basic-header {
+    font-size: 3rem;
+}
 
 // primary heading clamp
 

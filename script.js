@@ -396,7 +396,7 @@ const selects = [...formSteps[currentStep].querySelectorAll('select')];
                 checkDate(dateInput);
                 checkGuests(guestInput, 1, 10);
                 const checksPass = (currentValue) => currentValue.parentElement.classList.contains('success');
-                inputs.every(checksPass) === true ? validation = true : validation = false;
+                inputs.every(checksPass) === true && selects.every(checksPass) === true ? validation = true : validation = false;
             }
             else if(currentStep === 1) {
                 checkLength(passwordInput, 6, 25);

@@ -396,10 +396,7 @@ const selects = [...formSteps[currentStep].querySelectorAll('select')];
                 checkDate(dateInput);
                 checkGuests(guestInput, 1, 10);
                 const checksPass = (currentValue) => currentValue.parentElement.classList.contains('success');
-                // console.log(inputs.every(checksPass))
-                if (inputs.every(checksPass) === true ) {
-                    validation = true;
-                }
+                inputs.every(checksPass) === true ? validation = true : validation = false;
             }
             else if(currentStep === 1) {
                 checkLength(passwordInput, 6, 25);
@@ -407,10 +404,7 @@ const selects = [...formSteps[currentStep].querySelectorAll('select')];
                 checkPasswordsMatch(passwordInput, password2Input);
                 checkNames(fnameInput, lnameInput);
                 const checksPass = (currentValue) => currentValue.parentElement.classList.contains('success');
-                // console.log(inputs.every(checksPass))
-                if (inputs.every(checksPass) === true) {
-                    validation = true;
-                }
+                inputs.every(checksPass) === true ? validation = true : validation = false;
             } else {
                 validation = true;
             }
@@ -465,7 +459,7 @@ const reviews = [
         "name": 'Mateo Urdiales',
         "job": 'product manager',
         "title": 'Great Service, Awesome Amenitites',
-        "img": '/images/man-red-shirt.jpg',
+        "img": 'images/man-red-shirt.jpg',
         "text": 'My wife and I jump to come here whenever we can find a babysitter. Their deep tissue massages make me feel like a new man. Don\'t disregard their haircut services either. Sophia always provides me a great cut with great conversation.',
     },
     {
@@ -473,7 +467,7 @@ const reviews = [
         "name": 'Sarah Forbes',
         "job": 'beauty blogger',
         "title": 'Frequent Visitor',
-        "img": '/images/woman-towel.jpg',
+        "img": 'images/woman-towel.jpg',
         "text":'The best spa in Dallas x10! I am a frequent local who comes just to get pampered! I always come for an 80-minute aromatherapy massage and the staff is fantastic at making me feel so relaxed and at ease. For your special occasions, be sure to book a celebrity facial with Chloe!' ,
     },
     {
@@ -481,7 +475,7 @@ const reviews = [
         "name": 'Anna Koto',
         "job": 'accountant',
         "title": 'Wonderful Experience',
-        "img": '/images/woman-yellow-jacket.jpg',
+        "img": 'images/woman-yellow-jacket.jpg',
         "text": 'Had a fabulous facial with Amanda! She was caring, gentle, and knowledgeable. Spa Selene is amazing! Friendly staff, great service selections, and the spa smell is soo good! Already scheduled my next appointment!',
     },
     {
@@ -489,7 +483,7 @@ const reviews = [
         "name": 'Will Anderson',
         "job": 'buisness owner',
         "title": 'Nice Relaxing Spa',
-        "img": '/images/man-white-shirt.jpg',
+        "img": 'images/man-white-shirt.jpg',
         "text": 'Will be back as a regular customer for sure! I had the 50-minute therapeutic massage with Kim. She gave an amazing massage. The pressure was on point, and she checked in with me a couple of times to make sure I was taken care of. ',
     }
 ];

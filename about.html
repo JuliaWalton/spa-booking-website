@@ -3,39 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- googlefonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400;1,900&family=Playfair+Display:ital,wght@1,500;1,800;1,900&display=swap"
+        rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
-    <article class="about">
-        <div class="about-text">
-            <div class="about-title">
-                <h2>"A LUXURY SPA DESTINATION IN UPTOWN DALLAS"</h2>
-                <small>- The D Magazine</small>
-            </div>
-            <!-- <div class="about-text-container">
-                        <h2>About Spa Selene</h2>
-                        <h4><i>Time to Unwind</i></h4>
-                    </div>
-                    <h4><i>It's Time to Feel Your Best</i></h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor at ipsam illo provident quam. Veritatis quos,
-                        quia minima iste eaque nulla ipsam?</p> -->
-            <a class="learn-btn" href="">Learn More</a>
-            <a class="book-btn" href="">Book Treatment</a>
-            <div class="about-text-hours">
-                <h3>Hours of Operation:</h3>
-                <div class="schedule">
-                    <div>
-                        <p class="days">Monday – Friday</p>
-                        <p class="hours">10 am – 6 pm</p>
-                    </div>
-                    <div>
-                        <p class="days">Saturday & Sunday</p>
-                        <p class="hours">9 am – 6 pm</p>
-                    </div>
+    <nav class="nav">
+        <div class="nav-center">
+            <div class="nav-header fixed">
+                <a class="home-logo-img" href="#home">
+                    <img src="images/logo.png" width="120" alt="home">
+                </a>
+                <button id="nav-toggle" class="nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="links-container">
+                    <ul class="links">
+                        <li>
+                            <a href="services.html" class="visit-link">services</a>
+                        </li>
+                        <li>
+                            <a href="amenities.html" class="visit-link">amenities</a>
+                        </li>
+                        <li>
+                            <a href="about.html" class="visit-link">about</a>
+                        </li>
+                        <li>
+                            <a href="#reserve" class="links-reserve-btn book-dropdown">reserve now</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
+    </nav>
+<article class="about page">
+    <div class="page-hero">
+                <!-- <img class="hero-img" src="images/bath-interior.jpg" alt="interior of a private bath"> -->
+                <h4 class="primary-header page-title">About</h4>
+            </div>
+    <div class="about-text">
+        <div class="about-main">
+            
+            <h2 class="primary-header">It's All About Your Comfort</h2>
+            <p class="description-text">Spoil yourself with a day of total tranquility at Spa Selene. Located in the
+                heart of uptown Dallas, our spa is the perfect spot to revitalize and rejuenate. Our spa offers a
+                variety of restorative massage treatments, skincare rituals, and more for you to experience and enjoy.
+            </p>
+            <p class="description-text">The 5,000-square-foot spa includes six personsal treatment rooms, a couple’s room
+                with a private terrace, a relaxation room with a patio overlooking Dallas, a salon, a private event room
+                and healthy food offerings. We encourage you to book an appointment as early as possible as reservations
+                fill up quickly. </p>
+            <!-- <h2>"The time to relax is when you have no time for it"</h2>
+                    <small>- Sydney J. Harris</small> -->
+        </div>
+        <div class="about-btn-container">
+            <a class="buttons" href="">Book Treatment</a>
+        </div>
+    </div>
+    <div class="about-text-hours">
+        <h3 class="minor-header">Hours of Operation:</h3>
+        <div class="schedule">
+            <div>
+                <p class="description-text days">Monday – Friday</p>
+                <p class="description-text hours">10 am – 6 pm</p>
+            </div>
+            <div>
+                <p class="description-text days">Saturday & Sunday</p>
+                <p class="description-text hours">9 am – 6 pm</p>
+            </div>
+        </div>
+    </div>
         <div class="carousel" arial-label="modern luxury spa interior" data-carousel>
             <button class="carousel-button next" data-carousel-button="next">
                 <i class="fas fa-caret-right"></i>
@@ -45,21 +87,18 @@
             </button>
             <ul data-slides>
                 <li class="slide" data-active>
-                    <img class="carousel-image" src="/images/unsplash/about/huum-xn_MghoT9HE-unsplash - Copy.jpg"
-                        alt="steam room">
+                    <img class="carousel-image" src="images/zen-garden.jpg" alt="meditating stone buddha in garden">
                 </li>
                 <li class="slide">
-                    <img class="carousel-image fix" src="images/unsplash/about/raphael-lovaski-cJwl8182Mjs-unsplash.jpg"
-                        alt="treatment room">
+                    <img class="carousel-image" src="images/steam-room.jpg" alt="steam room">
                 </li>
-    
+            
                 <li class="slide">
-                    <img class="carousel-image" src="/images/unsplash/li-yang-a8iCZvtrHpQ-unsplash.jpg"
-                        alt="pool and lounge">
+                    <img class="carousel-image fix" src="images/woman-receiving-massage.jpg"
+                        alt="woman recieving a massage in treatment room">
                 </li>
                 <li class="slide">
-                    <img class="carousel-image" src="/images/unsplash/jennifer-pyle-zYLxYHJv5wI-unsplash.jpg"
-                        alt="steam room">
+                    <img class="carousel-image" src="images/pool-lounge.jpg" alt="pool and lounge facilities">
                 </li>
             </ul>
         </div>

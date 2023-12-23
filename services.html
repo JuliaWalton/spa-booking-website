@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- googlefonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400;1,900&family=Playfair+Display:ital,wght@1,500;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="nav-center">
+            <div class="nav-header fixed">
+                <a class="home-logo-img" href="#home">
+                    <img src="images/logo.png" width="120" alt="home">
+                </a>
+                <button id="nav-toggle" class="nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="links-container">
+                    <ul class="links">
+                        <li>
+                            <a href="services.html" class="visit-link">services</a>
+                        </li>
+                        <li>
+                            <a href="amenities.html" class="visit-link">amenities</a>
+                        </li>
+                        <li>
+                            <a href="about.html" class="visit-link">about</a>
+                        </li>
+                        <li>
+                            <a href="#reserve" class="links-reserve-btn book-dropdown">reserve now</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <article class="treatments services page">
+        <div class="page-hero">
+            <!-- <img class="hero-img" src="images/bath-interior.jpg" alt="interior of a private bath"> -->
+            <h4 class="primary-header page-title">Services</h4>
+        </div>
+        <!-- <div class="services-text">
+            <div class="services-main"> -->
+
+                <h2 class="primary-header">The Treatment Menu</h2>
+                <div class="treatments-group">
+                    <div class="treatments-container">
+                        <div class="treatments-btn-container">
+                            <button class="filter-btn" data-orange="massages">
+                                Massage
+                            </button>
+                            <button class="filter-btn active" data-orange="skincare">
+                                Skincare
+                            </button>
+                            <button class="filter-btn" data-orange="haircare">
+                                Haircare
+                            </button>
+                            <button class="filter-btn" data-orange="gentlemen">
+                                Gentlemen
+                            </button>
+                            <button class="filter-btn" data-orange="packages">
+                                Deluxe Packages
+                            </button>
+                        </div>
+                    </div>
+                
+                    <section class="treatments-content">
+                        <div class="content" id="massages">
+                            <!-- treatments are inserted dynamically -->
+                        </div>
+                    </section>
+                
+                    
+                
+                </div>
+                <div class="black-line"></div>
+    </article>
+    <script src="treatments.js"></script>
+</body>
+
+</html>

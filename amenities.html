@@ -9,16 +9,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400;1,900&family=Playfair+Display:ital,wght@1,500;1,800;1,900&display=swap"
-        rel="stylesheet">
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400;1,900&family=Playfair+Display:ital,wght@1,500;1,800;1,900&display=swap"
+    rel="stylesheet">
+<!-- fontawesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+<title>Document</title>
     <title>Document</title>
 </head>
 
 <body>
-    <nav class="nav">
+    <nav class="nav page-nav">
         <div class="nav-center">
-            <div class="nav-header fixed">
-                <a class="home-logo-img" href="#home">
+            <div class="nav-header">
+                <a class="home-logo-img" href="index.html">
                     <img src="images/logo.png" width="120" alt="home">
                 </a>
                 <button id="nav-toggle" class="nav-toggle">
@@ -48,52 +51,105 @@
             <!-- <img class="hero-img" src="images/bath-interior.jpg" alt="interior of a private bath"> -->
             <h4 class="primary-header page-title">Amenities</h4>
         </div>
+
         <div class="amenities-text">
             <div class="amenities-main">
+                <h2 class="primary-header">Surround Yourself in Serene Style</h2>
+                <p class="description-text">
+                    Our spa environment is carefully curated to create a peaceful and inviting atmosphere. Immerse yourself in the soothing
+                    ambiance, where soft lighting, calming scents, and tranquil music create the perfect backdrop for your relaxation
+                    journey. Our luxurious facilities include private treatment rooms, a serene lounge area, and state-of-the-art amenities
+                    to enhance your overall experience. <br><br>
 
-                <h2 class="primary-header">Serene Style</h2>
-                <p class="description-text">Spoil yourself with a day of total tranquility at Spa Selene. Located in the
-                    heart of uptown Dallas, our spa is the perfect spot to revitalize and rejuenate. Our spa offers a
-                    variety of restorative massage treatments, skincare rituals, and more for you to experience and
-                    enjoy.
-                </p>
-                <p class="description-text">The 5,000-square-foot spa includes six personsal treatment rooms, a couple’s
-                    room
-                    with a private terrace, a relaxation room with a patio overlooking Dallas, a salon, a private event
-                    room
-                    and healthy food offerings. We encourage you to book an appointment as early as possible as
-                    reservations
-                    fill up quickly. </p>
+                    At Spa Selene, we prioritize the use of natural and high-quality products in our treatments, ensuring that
+                    you receive the utmost care and nourishment for your skin and body. Our therapists are trained in a variety of
+                    techniques, allowing us to tailor each session to meet your individual needs and preferences.</p>
+                    <div class="about-btn-container">
+                        <a class="buttons" href="">Book Treatment</a>
+                        <a class="buttons" href="">Explore Menu</a>
+                    </div><br><br>
                 <!-- <h2>"The time to relax is when you have no time for it"</h2>
                     <small>- Sydney J. Harris</small> -->
             </div>
         </div>
-        <div class="carousel" arial-label="modern luxury spa interior" data-carousel>
-            <button class="carousel-button next" data-carousel-button="next">
-                <i class="fas fa-caret-right"></i>
-            </button>
-            <button class="carousel-button prev" data-carousel-button="prev">
-                <i class="fas fa-caret-left"></i>
-            </button>
-            <ul data-slides>
-                <li class="slide" data-active>
-                    <img class="carousel-image" src="images/zen-garden.jpg" alt="meditating stone buddha in garden">
-                </li>
-                <li class="slide">
-                    <img class="carousel-image" src="images/steam-room.jpg" alt="steam room">
-                </li>
+        
+        <section class="amenities-pictures">
+            <h2 class="primary-header">What to Expect</h2><br>
+            <div class="amenities-img-grid">
+                <div class="amenities-background img-1">
+                    <div class="overlay">
+                        <div class="text">
+                            <p class="txt-title">State of the Art Facilities</p>
+                            <p class="description-text">
+                                Our spa features modern designs with luxurious finishes. We invite you to utilize our pool, hot tub, and steam
+                                sauna, and lounge prior to any of our services.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="amenities-background img-2">
+                    <div class="overlay">
+                        <div class="text">
+                            <p class="txt-title">Medical Grade Products </p>
+                            <p class="description-text">
+                                We take pride in selecting the finest products for our treatments. Select products used are available for purchase
+                                in the lobby. 40% discounts on products are offered with the purchase of a service exceeding $300.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="amenities-background img-3">
+                    <div class="overlay">
+                        <div class="text">
+                            <p class="txt-title">Yoga in the Garden</p>
+                            <p class="description-text">
+                                Spa Selene is excited to host Free-Yoga-Friday's in our garden for the members of our spa community. This all-levels
+                                yoga flow is taught by our staff member and gifted-yogi, Liz. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="amenities-background img-4">
+                    <div class="overlay">
+                        <div class="text">
+                            <p class="txt-title">Complimentary Beverages & Bites</p>
+                            <p class="description-text">
+                                Guests of Spa Selene are welcome to indulge in a selection of wine, coffee, tea, and healthy food options. Menu's
+                                are available upon request.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                <li class="slide">
-                    <img class="carousel-image fix" src="images/woman-receiving-massage.jpg"
-                        alt="woman recieving a massage in treatment room">
-                </li>
-                <li class="slide">
-                    <img class="carousel-image" src="images/pool-lounge.jpg" alt="pool and lounge facilities">
-                </li>
-            </ul>
-        </div>
+
+
     </article>
+    <footer>
+        <a href="/index.html">
+            <img src="images/logo.png" alt="home">
+        </a>
+        <ul class="footer-contact">
+            <li class="footer-title">CONTACT INFO</li>
+            <li>Spa Selene and Salon</li>
+            <li>1111 E Mockingbird Ln</li>
+            <li>Suite 300</li>
+            <li>Dallas, TX 75206</li>
+            <li>Phone: 000.000.0000</li>
+        </ul>
+    
+        <div class="footer-note">
+            <p class="footer-title">APPOINTMENTS & GIFT CARDS</p>
+            <p>Please book online to schedule your Spa Selene experience today. Check out our social media to hear first
+                about seasonal specials and sale events.</p><br>
+            <p class="footer-title">FOLLOW US ON SOCIALS</p>
+            <div class="socials">
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+            </div>
+        </div>
+    </footer>
 
+    <script src="script.js"></script>
 </body>
 
 </html>

@@ -3,20 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- stylesheet -->
     <link rel="stylesheet" href="css/style.css">
     <!-- googlefonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400;1,900&family=Playfair+Display:ital,wght@1,500;1,800;1,900&display=swap"
-        rel="stylesheet">
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400;1,900&family=Playfair+Display:ital,wght@1,500;1,800;1,900&display=swap"
+    rel="stylesheet">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <title>Document</title>
 </head>
 <body>
-    <nav class="nav">
+    <nav class="nav page-nav">
         <div class="nav-center">
-            <div class="nav-header fixed">
-                <a class="home-logo-img" href="#home">
+            <div class="nav-header">
+                <a class="home-logo-img" href="index.html">
                     <img src="images/logo.png" width="120" alt="home">
                 </a>
                 <button id="nav-toggle" class="nav-toggle">
@@ -43,26 +46,32 @@
     </nav>
 <article class="about page">
     <div class="page-hero">
+            <div class="img">
                 <!-- <img class="hero-img" src="images/bath-interior.jpg" alt="interior of a private bath"> -->
-                <h4 class="primary-header page-title">About</h4>
             </div>
+                <h4 class="primary-header page-title">About</h4>
+    </div>
     <div class="about-text">
         <div class="about-main">
-            
             <h2 class="primary-header">It's All About Your Comfort</h2>
-            <p class="description-text">Spoil yourself with a day of total tranquility at Spa Selene. Located in the
-                heart of uptown Dallas, our spa is the perfect spot to revitalize and rejuenate. Our spa offers a
-                variety of restorative massage treatments, skincare rituals, and more for you to experience and enjoy.
-            </p>
-            <p class="description-text">The 5,000-square-foot spa includes six personsal treatment rooms, a couple’s room
-                with a private terrace, a relaxation room with a patio overlooking Dallas, a salon, a private event room
-                and healthy food offerings. We encourage you to book an appointment as early as possible as reservations
-                fill up quickly. </p>
+            <p class="description-text">
+                Welcome to Spa Selene, where we invite you to embark on a journey of rejuvenation and relaxation. Nestled in the heart
+                of Dallas, our spa is a haven of tranquility that offers a respite from the hustle and bustle of everyday life. We have happily been serving our community in the Dallas Metroplex for over 10 years.</p>
+                <p class="description-text">
+                At Spa Selene, we believe in the power of self-care and holistic well-being. Our team of experienced and
+                skilled therapists is dedicated to providing you with a transformative spa experience that revitalizes your body, mind,
+                and spirit. From soothing massages to invigorating facials, each treatment is designed to promote balance, harmony, and
+                a sense of renewal.</p>
+            <p class="description-text">Whether you're seeking a moment of escape from the demands of daily life, recovering from a strenuous workout, or simply
+            indulging in self-care, Spa Selene is committed to providing you with an unforgettable and revitalizing
+            experience. Step into our oasis of calmness, where relaxation and rejuvenation await you. Embrace the journey to a
+            healthier, happier, and more balanced you at Spa Selene today.</p>
             <!-- <h2>"The time to relax is when you have no time for it"</h2>
                     <small>- Sydney J. Harris</small> -->
         </div>
         <div class="about-btn-container">
             <a class="buttons" href="">Book Treatment</a>
+            <a class="buttons" href="">Explore Menu</a>
         </div>
     </div>
     <div class="about-text-hours">
@@ -86,14 +95,14 @@
                 <i class="fas fa-caret-left"></i>
             </button>
             <ul data-slides>
-                <li class="slide" data-active>
+                <li class="slide">
                     <img class="carousel-image" src="images/zen-garden.jpg" alt="meditating stone buddha in garden">
                 </li>
                 <li class="slide">
                     <img class="carousel-image" src="images/steam-room.jpg" alt="steam room">
                 </li>
             
-                <li class="slide">
+                <li class="slide" data-active>
                     <img class="carousel-image fix" src="images/woman-receiving-massage.jpg"
                         alt="woman recieving a massage in treatment room">
                 </li>
@@ -102,7 +111,149 @@
                 </li>
             </ul>
         </div>
+
+
+    <!-- FAQ content -->
+    <article class="faq">
+        <div class="faq-center">
+            <h2 class="basic-header">faq</h2>
+            <!-- start of question -->
+            <section class="faq-question show-answer">
+                <div class="faq-question-title">
+                    <p>Scheduling an Appointment</p>
+                    <button class="faq-question-btn" type="button">
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+                <div class="faq-question-text">
+                    <p>
+                        To schedule an appointment, please utilize our site to book online. For the ultimate spa experience,
+                        we recommend arriving one hour prior to your scheduled service time to relax and unwind in our spa
+                        amenities before your treatment.
+                    </p>
+                </div>
+            </section>
+            <!-- end of question -->
+            <!-- start of question -->
+            <section class="faq-question">
+                <div class="faq-question-title">
+                    <p>Cancellation Policy</p>
+                    <button class="faq-question-btn" type="button">
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+                <div class="faq-question-text">
+                    <p>
+                        A 100% charge will be incurred for any treatment not canceled at least 24 hours to your scheduled
+                        time. Late arrival
+                        will result in a shortened treatment time.
+                    </p>
+                </div>
+            </section>
+            <!-- end of question -->
+            <!-- start of question -->
+            <section class="faq-question">
+                <div class="faq-question-title">
+                    <p>Health Conditions</p>
+                    <button class="faq-question-btn" type="button">
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+                <div class="faq-question-text">
+                    <p>
+                        Kindly advise us of any health conditions, allergies, or injuries which could affect your choice of
+                        treatment when
+                        making your spa reservation.
+                    </p>
+                </div>
+            </section>
+            <!-- end of question -->
+            <!-- start of question -->
+            <section class="faq-question">
+                <div class="faq-question-title">
+                    <p>Pregnancy</p>
+                    <button class="faq-question-btn" type="button">
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+                <div class="faq-question-text">
+                    <p>
+                        We have specially designed treatments for expectant mothers. Please allow our spa team to guide you
+                        in selecting
+                        treatments that are suitable during this special time.
+                    </p>
+                </div>
+            </section>
+            <!-- end of question -->
+        </div>
     </article>
 
+    <!-- reviews content -->
+    <article class="reviews">
+        <div class="title">
+            <h3 class="basic-header">our reviews</h3>
+            <div class="underline"></div>
+        </div>
+        <section class="review">
+            <button class="review-btn prev">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="review-btn next">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            <div class="img-container">
+                <img src="images/man-red-shirt.jpg" class="person-img" id="person-img" alt="reviewer's avatar" />
+            </div>
+            <div>
+                <h4 class="author" id="author">sara jones</h4>
+                <p class="stars">
+                    <img src="images/icon-star.svg">
+                    <img src="images/icon-star.svg">
+                    <img src="images/icon-star.svg">
+                    <img src="images/icon-star.svg">
+                    <img src="images/icon-star.svg">
+                </p>
+            </div>
+            <h4 class="minor-header" id="main-info">"Wonderful Experience"</h4>
+            <p class="description-text" id="info">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+                asperiores debitis incidunt, eius earum ipsam cupiditate libero?
+                Iste, doloremque nihil?
+            </p>
+        </section>
+    </article>
+
+
+
+
+
+    <footer>
+        <a href="/index.html">
+            <img src="images/logo.png" alt="home">
+        </a>
+        <ul class="footer-contact">
+            <li class="footer-title">CONTACT INFO</li>
+            <li>Spa Selene and Salon</li>
+            <li>1111 E Mockingbird Ln</li>
+            <li>Suite 300</li>
+            <li>Dallas, TX 75206</li>
+            <li>Phone: 000.000.0000</li>
+        </ul>
+    
+        <div class="footer-note">
+            <p class="footer-title">APPOINTMENTS & GIFT CARDS</p>
+            <p>Please book online to schedule your Spa Selene experience today. Check out our social media to hear first
+                about seasonal specials and sale events.</p><br>
+            <p class="footer-title">FOLLOW US ON SOCIALS</p>
+            <div class="socials">
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
 </body>
 </html>

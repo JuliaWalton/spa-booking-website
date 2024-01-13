@@ -1,3 +1,5 @@
+
+
 // navigation toggle for mobile + fixed nav
 const navToggle = document.querySelector('.nav-toggle');
 const nav = document.querySelector('.nav');
@@ -17,6 +19,21 @@ window.addEventListener('scroll', () => {
     }
 })
 
+
+// highlight active link
+const globalState = {
+    currentPage: window.location.pathname,
+};
+
+
+function highlightActiveLink() {
+    const navLinks = document.querySelectorAll('.visit-link');
+    navLinks.forEach((link) => {
+        if (link.getAttribute('href') === globalState.currentPage) {
+            link.classList.add('current-link');
+        }
+    });
+}
 
 // carousel image slider
 const buttons = document.querySelectorAll('[data-carousel-button]');
@@ -506,7 +523,9 @@ const nextBtnRev = document.querySelector('.review-btn.next');
 
 let count = 0;
 
-function showPerson(array) {
+
+function showReviews() {
+    function showPerson(array) {
     const update = reviews[count];
     console.log(update)
     image.src = update.img;
@@ -532,15 +551,99 @@ prevBtnRev.addEventListener('click', () => {
     showPerson();
 })
 
-// window.addEventListener('DOMContentLoaded', () => {
-//     showPerson();
-// })
-// end of reviews functionality
+showPerson();
+}
 
 
-const globalState = {
-    currentPage: window.location.pathname,
-};
+
+// ********** scroll to form ************
+// select nodelist of links
+// associate each link to its corresponding section via an id
+// then, calculate the heights of involved elements
+const reserveLinks = document.querySelectorAll('.reserve');
+// const nav = document.querySelector('.nav');
+
+function scrollBooking() {
+reserveLinks.forEach((link) => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const keyword = e.currentTarget.getAttribute('href').slice(1);
+        console.log(keyword);
+        const corresponding = document.getElementById(keyword);
+
+        const navHeight = nav.getBoundingClientRect().height;
+        console.log(navHeight);
+        const containerHeight = linksContainer.getBoundingClientRect().height;
+        const fixedNav = nav.classList.contains('fixed');
+        // const fixedNavHeight = fixedNav.getBoundingClientRect().height;
+        let position = corresponding.offsetTop - navHeight;
+        // if (!fixedNav) {
+        //     position = position - navHeight;
+        // } 
+        if (linksContainer.classList.contains('show-links')) {
+            position = position + (containerHeight + containerHeight);
+        } 
+        if (!fixedNav) {
+            position = position - (navHeight - 30);
+        }
+        if (fixedNav) {
+            position = position - navHeight;
+        }
+
+        window.scrollTo ({
+            left: 0,
+            top: position,
+    })
+    // linksContainer.style.height = 0;
+    })
+})
+}
+
+
+
+
+
+
+
+const modalCloseBtn = document.querySelector('.modal-close-btn');
+const modal = document.querySelector('.modal-container');
+const activateModalBtn = document.querySelector('.activate-modal-btn');
+const navReserveBtn = document.querySelector('.links-reserve-btn')
+
+if(globalState !== '/index.html') {
+    navReserveBtn.addEventListener('click', () => {
+    modal.classList.add('show-modal')
+    })
+}
+
+function bookingModal() {
+    activateModalBtn.addEventListener('click', () => {
+    modal.classList.add('show-modal')
+    })
+    modalCloseBtn.addEventListener('click', ()=>{
+        modal.classList.remove('show-modal')
+    })
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Below is a router, so wherever we want to run a function in response to a certain page, we'll put it inside that corresponding case
 
@@ -551,26 +654,30 @@ function init() {
         case '/index.html':
             fetchTreatments();
             filterTreatments();
+            scrollBooking()
             formButtons()
             populateSelect();
-            showPerson();
+            showReviews();
             break;
         case '/services.html':
             fetchTreatments();
             filterTreatments()
+            showReviews();
             break;
         case '/amenities.html':
             // displayMovieDetails();
+            bookingModal()
+            formButtons()
+            populateSelect();
             break;
         case '/about.html':
-            showPerson();
+            bookingModal()
+            formButtons()
+            populateSelect();
             break;
-        // case '/search.html':
-        //     console.log('Search');
-        //     break;
     }
 
-    // highlightActiveLink();
+    highlightActiveLink();
 }
 
 document.addEventListener('DOMContentLoaded', init);

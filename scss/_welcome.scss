@@ -48,7 +48,7 @@ nav {
     font-size: .8rem;
 }
 
-.links a {
+.visit-link {
     display: block;
     font-size: 1rem;
     text-transform: uppercase;
@@ -82,6 +82,14 @@ nav {
 }
 
 .links-reserve-btn {
+    display: block;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    color: rgb(255, 255, 255);
+    
     background-color: rgb(216, 56, 123);
     max-width: max-content; 
 }
@@ -124,7 +132,7 @@ nav {
         gap: 2rem;
     }
 
-    .links a {
+    .visit-link {
         color: white;
         font-size: 1.1rem;
         text-transform: uppercase;

@@ -1,6 +1,8 @@
+@use 'root';
+
 footer {
-    background-color: black;
-    color: white;
+    background-color: root.$neutral-black;
+    color: root.$neutral-white;
     display: grid;
     grid-template-columns: 1fr 1fr 1.5fr;
     align-items: start;
@@ -27,7 +29,7 @@ footer a {
 .footer-title {
     padding-bottom: .35rem;
     // text-decoration: underline;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid root.$neutral-white;
     line-height: 1.5;
 
 }
@@ -37,5 +39,3 @@ footer a {
     gap: 1rem;
     padding-top: .45rem;
 }
-
-// @media  

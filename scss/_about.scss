@@ -1,8 +1,9 @@
+@use 'root';
 // *********************
 // about section styling  
 // *********************
 
-.about {
+.about-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
@@ -11,10 +12,6 @@
     padding-block: clamp(1rem, -0.19999999999999996rem + 6vw, 7rem);
     padding-inline: 1rem;
     padding-inline:clamp(1rem, 0.19999999999999996rem + 4vw, 5rem);
-}
-
-.about-text-hours {
-    grid-column: 1/2;
 }
 
 .about-text {
@@ -42,6 +39,7 @@
 
 .about-text-hours {
     text-align: center;
+    grid-column: 1/2;
 }
 
 .schedule {
@@ -55,9 +53,6 @@
     font-style: italic;
 }
 
-.about-btn-container .buttons{
-    color: white;
-}
 
 // **************************
 // about section img carousel  
@@ -116,7 +111,7 @@
 
 .carousel-button:focus,
 .carousel-button:hover {
-    color: rgb(255, 255, 255);
+    color: root.$neutral-white;
     background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -125,7 +120,7 @@
 }
 
 @media (max-width: 1200px) {
-    .about {
+    .about-content {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 2fr auto;
     }
@@ -142,7 +137,7 @@
 }
 
 @media (max-width: 650px) {
-    .about {
+    .about-content {
             grid-template-rows: 1fr 1fr auto;
         }
 }

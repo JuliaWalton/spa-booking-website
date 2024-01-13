@@ -1,0 +1,37 @@
+@use 'root';
+
+.services.page {
+grid-template-rows: 1fr auto;
+
+    .page-hero {
+        background-image: url("../images/girl-menu.jpg");
+    }
+    .treatments-btn-container {
+        display: flex;
+        padding-top: 0rem;
+    }
+    .treatments-group {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+        
+    }
+}
+
+@media (min-width: 800px) {
+    .services.page {
+        grid-template-rows: 1fr auto;
+        // color:red;
+    }
+    // .treatments-group {
+    //     display: grid;
+    //     grid-template-columns: 1fr;
+    //     grid-template-rows: auto 1fr;
+    //     color: red;
+    // }
+    // .filter-btn {
+    //     color: red;
+    // }
+}
+
+

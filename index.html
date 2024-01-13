@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- favicon -->
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>
+        🪷</text></svg>">
     <!-- stylesheets -->
     <link rel="stylesheet" href="css/style.css">
     <!-- googlefonts -->
@@ -17,13 +21,12 @@
     <title>Spa Selene</title>
 </head>
 <body>
-    <header id ="home" class="home">
+    <header class="hero">
         <!-- nav bar -->
             <nav class="nav">
-                <div class="nav-center">
                     <div class="nav-header">
-                        <a class ="home-logo-img" href="index.html">
-                            <img src="images/logo.png" width="120" alt="home">
+                        <a class="nav-logo" href="index.html">
+                            <img src="images/logo.png" width="120px" alt="home">
                         </a>
                         <button id="nav-toggle" class="nav-toggle">
                             <i class="fas fa-bars"></i>
@@ -31,21 +34,20 @@
                         <div class="links-container">
                             <ul class="links">
                                 <li>
-                                    <a href="/services.html" class="visit-link">services</a>
+                                    <a href="/services.html" class="nav-link">services</a>
                                 </li>
                                 <li>
-                                    <a href="/amenities.html" class="visit-link">amenities</a>
+                                    <a href="/amenities.html" class="nav-link">amenities</a>
                                 </li>
                                 <li>
-                                    <a href="/about.html" class="visit-link">about</a>
+                                    <a href="/about.html" class="nav-link">about</a>
                                 </li>
                                 <li>
-                                    <a href="#reserve" class="links-reserve-btn reserve">reserve now</a>
+                                    <a href="#reserve" class="nav-link nav-reserve-btn reserve">reserve now</a>
                                 </li>
                             </ul>
                         </div>  
                     </div>
-                </div>
             </nav>
         <!-- banner content -->
         <div class="banner">
@@ -63,7 +65,7 @@
 
     <main>
         <!-- about content -->
-        <article class="about">
+        <article class="about-content">
             <div class="about-text">
                 <div class="about-main">
                     <h2 class="primary-header">Our holistic approach to beauty</h2>
@@ -364,9 +366,8 @@
 
         <!-- reviews content -->
         <article class="reviews">
-            <div class="title">
+            <div class="reviews-title">
                 <h3 class="basic-header">our reviews</h3>
-                <div class="underline"></div>
             </div>
             <section class="review">
                 <button class="review-btn prev">
@@ -384,13 +385,13 @@
                 </div>
                 <div>
                     <h4 class="author" id="author">Mateo Urdiales</h4>
-                    <p class="stars">
+                    <div class="stars">
                         <img src="images/icon-star.svg">
                         <img src="images/icon-star.svg">
                         <img src="images/icon-star.svg">
                         <img src="images/icon-star.svg">
                         <img src="images/icon-star.svg">
-                    </p>
+                    </div>
                 </div>
                 <h4 class="minor-header" id="main-info">Great Service, Awesome Amenitites</h4>
                 <p class="description-text" id="info">

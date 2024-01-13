@@ -1,6 +1,17 @@
+@use 'root';
+// *******************************************
+// SASS variables 
+// *******************************************
+
+
+// *******************************************
+// global styles
+// *******************************************
+
 body {
-    font-family: 'Lato', sans-serif;
+    font-family: root.$primary-font;
     font-size: 1.2rem;
+    color: root.$neutral-black;
 }
 
 button {
@@ -9,18 +20,18 @@ button {
 }
 
 .buttons {
-    background-color: black;
+    background-color: root.$neutral-black;
     padding: .8rem 1.5rem;
     justify-self: start;
     font-size: 0.75rem;
     font-size: clamp(0.75rem, 0.65rem + 0.5vw, 1.1rem);
     text-transform: capitalize;
     letter-spacing: .9px;
-    color: inherit;
+    color: root.$neutral-white;
 }
 
 .buttons:hover {
-    background-color: rgb(216, 56, 123);
+    background-color: root.$primary-accent-color;
 }
 
 .description-text {
@@ -28,16 +39,11 @@ button {
     font-size: clamp(0.75rem, 0.65rem + 0.5vw, 1.25rem);
 }
 
-.minor-header {
-    font-size: 1.25rem;
-    font-size: clamp(1.25rem, 1.2rem + 0.25vw, 1.5rem);
-}
-
 .primary-header {
     font-size: 1.8rem;
     font-size: clamp(1.8rem, 1.56rem + 1.2vw, 3rem);
     font-weight: 900;
-    font-family: 'Playfair Display', serif;
+    font-family: root.$secondary-font;
     letter-spacing: 2px;
 }
 
@@ -45,18 +51,12 @@ button {
     font-size: 3rem;
 }
 
+.minor-header {
+    font-size: 1.25rem;
+    font-size: clamp(1.25rem, 1.2rem + 0.25vw, 1.5rem);
+}
+
 .current-link {
     text-decoration: underline;
 }
 
-// primary heading clamp
-
-// paragraph text clamp
-
-// minor heading clamp
-
-// button text and padding clamp
-
-// set colors
-
-// change images to be much smaller for loading time

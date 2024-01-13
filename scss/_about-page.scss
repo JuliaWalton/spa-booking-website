@@ -1,14 +1,26 @@
+@use 'root';
+
+.page-nav {
+    background-color: root.$neutral-black;
+}
+
 .page {
+    display: grid;
+    gap: 2rem;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr auto auto .5fr;
-    // margin: auto;
+    text-align: center;
+
     margin: 0;
-    padding: 0;
+    padding: 0; 
     text-align: center;
 
     .carousel {
     grid-column: 1;
     grid-row: 3/4;
+    }
+
+    .about {
+        grid-template-rows: 1fr auto auto .5fr;
     }
 
     .about-btn-container {
@@ -63,9 +75,6 @@
     font-family: serif;
 }
 
-.page-nav {
-    background-color: black;
-}
 
 @media (min-width: 800px) {
     .page {

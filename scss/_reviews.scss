@@ -1,3 +1,4 @@
+@use 'root';
 .reviews {
     display: grid;
     justify-content: center;
@@ -8,7 +9,7 @@
     padding-bottom: clamp(0rem, -1.4000000000000001rem + 7.000000000000001vw, 7rem);
 }
 
-.title {
+.reviews-title {
     padding-bottom: 1rem;
     font-size: 3rem;
 }
@@ -22,7 +23,7 @@
 }
 
 .review .minor-header {
-    background-color:rgba(224, 53, 124, 0.137);
+    background-color: root.$tertiary-accent-color;
     padding: .5rem 1rem;
     border-radius: .5rem;
 }
@@ -47,7 +48,7 @@
     top: 50%;
     z-index: 5;
     transform: translateY(-50%);
-    color: rgb(224, 53, 124);
+    color: root.$primary-accent-color;
     cursor: pointer;
     border-radius: .25rem;
     padding: 0 1rem;
@@ -93,8 +94,8 @@
     place-items: center;
     border-radius: 50%;
     transform: translateY(25%);
-    background: rgb(224, 53, 124);
-    color:black;
+    background: root.$primary-accent-color;
+    color: root.$neutral-black;
 }
 
 .stars {

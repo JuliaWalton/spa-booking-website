@@ -27,7 +27,7 @@ const globalState = {
 
 
 function highlightActiveLink() {
-    const navLinks = document.querySelectorAll('.visit-link');
+    const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach((link) => {
         if (link.getAttribute('href') === globalState.currentPage) {
             link.classList.add('current-link');
@@ -608,7 +608,7 @@ reserveLinks.forEach((link) => {
 const modalCloseBtn = document.querySelector('.modal-close-btn');
 const modal = document.querySelector('.modal-container');
 const activateModalBtn = document.querySelector('.activate-modal-btn');
-const navReserveBtn = document.querySelector('.links-reserve-btn')
+const navReserveBtn = document.querySelector('.nav-reserve-btn')
 
 if(globalState !== '/index.html') {
     navReserveBtn.addEventListener('click', () => {

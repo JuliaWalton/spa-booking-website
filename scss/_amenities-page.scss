@@ -1,23 +1,29 @@
+// @use 'root'; 
+
 .amenities.page {
-    .page-hero {
-    background-image: url("../images/bath-interior.jpg");
-}
+    grid-template-rows: 1fr;
+
+        .page-hero {
+        background-image: url("../images/bath-interior.jpg");
+    }
+    .about-btn-container {
+        padding-block: 1rem;
+    }
 }
 
-.amenities-text {
-    // margin-block: 1rem;
-    padding: 1rem;
-}
-
-.amenities-main > .description-text {
-    padding-block: 1rem 2rem;
-    margin: auto;
-    padding-inline: 1rem;
+@media (min-width: 800px) {
+    .amenities.page {
+        grid-template-rows: 1fr auto;
+    }
 }
 
 .text > .description-text {
     font-size: 0.65rem;
     font-size: clamp(0.65rem, 0.5800000000000001rem + 0.35vw, 1rem);
+}
+.amenities-main {
+    display: grid;
+    gap: 1rem;
 }
 
 .amenities-pictures {
@@ -124,9 +130,4 @@
         height: 1000px;
         min-width: 200px;
 }
-}
-
-
-.services .treatments-background-img {
-    display: none;
 }

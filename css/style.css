@@ -71,6 +71,7 @@ h6 {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 ul {
@@ -111,6 +112,7 @@ ul {
 body {
   font-family: "Lato", sans-serif;
   font-size: 1.2rem;
+  color: rgb(0, 0, 0);
 }
 
 button {
@@ -119,14 +121,14 @@ button {
 }
 
 .buttons {
-  background-color: black;
+  background-color: rgb(0, 0, 0);
   padding: 0.8rem 1.5rem;
   justify-self: start;
   font-size: 0.75rem;
   font-size: clamp(0.75rem, 0.65rem + 0.5vw, 1.1rem);
   text-transform: capitalize;
   letter-spacing: 0.9px;
-  color: inherit;
+  color: rgb(255, 255, 255);
 }
 
 .buttons:hover {
@@ -136,11 +138,6 @@ button {
 .description-text {
   font-size: 0.75rem;
   font-size: clamp(0.75rem, 0.65rem + 0.5vw, 1.25rem);
-}
-
-.minor-header {
-  font-size: 1.25rem;
-  font-size: clamp(1.25rem, 1.2rem + 0.25vw, 1.5rem);
 }
 
 .primary-header {
@@ -155,18 +152,23 @@ button {
   font-size: 3rem;
 }
 
+.minor-header {
+  font-size: 1.25rem;
+  font-size: clamp(1.25rem, 1.2rem + 0.25vw, 1.5rem);
+}
+
 .current-link {
   text-decoration: underline;
 }
 
-.home {
+.hero {
   background-color: rgba(0, 0, 0, 0.1);
   background-image: url("../images/hero-img.jpg");
   background-blend-mode: multiply;
   background-size: cover;
   background-position: 80% 40%;
   background-repeat: no-repeat;
-  color: white;
+  color: rgb(255, 255, 255);
   height: 100vh;
   position: relative;
 }
@@ -188,16 +190,16 @@ nav {
 
 .fixed {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
   background-color: rgb(0, 0, 0);
   padding: 0.5rem 1.5rem;
+  width: 100%;
+  top: 0;
+  left: 0;
   transition: 0.5s ease-in;
   z-index: 1000;
 }
 
-.fixed .home-logo-img {
+.fixed .nav-logo {
   width: 100px;
 }
 
@@ -205,14 +207,13 @@ nav {
   font-size: 0.8rem;
 }
 
-.visit-link {
-  display: block;
-  font-size: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  padding: 0.5rem;
-  margin-bottom: 1rem;
+.nav-toggle {
+  background: none;
+  border: none;
   color: rgb(255, 255, 255);
+  font-size: 2rem;
+  display: block;
+  cursor: pointer;
 }
 
 .links-container {
@@ -225,32 +226,26 @@ nav {
   align-items: center;
 }
 
-.nav-toggle {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 2rem;
-  display: block;
-  cursor: pointer;
-}
-
-.links a:hover {
-  text-decoration: underline;
-}
-
-.links-reserve-btn {
-  display: block;
+.nav-link {
+  color: rgb(255, 255, 255);
   font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   padding: 0.5rem;
   margin-bottom: 1rem;
-  color: rgb(255, 255, 255);
+  display: block;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+.nav-reserve-btn {
   background-color: rgb(216, 56, 123);
   max-width: max-content;
 }
 
-.links-reserve-btn:hover {
+.nav-reserve-btn:hover {
   background-color: rgb(255, 105, 175);
 }
 
@@ -283,9 +278,10 @@ nav {
   .links {
     display: flex;
     gap: 2rem;
+    align-items: center;
   }
-  .visit-link {
-    color: white;
+  .nav-link {
+    color: rgb(255, 255, 255);
     font-size: 1.1rem;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -321,7 +317,7 @@ nav {
   max-width: 600px;
 }
 
-.about {
+.about-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
@@ -329,10 +325,6 @@ nav {
   padding-block: clamp(1rem, -0.2rem + 6vw, 7rem);
   padding-inline: 1rem;
   padding-inline: clamp(1rem, 0.2rem + 4vw, 5rem);
-}
-
-.about-text-hours {
-  grid-column: 1/2;
 }
 
 .about-text {
@@ -360,6 +352,7 @@ nav {
 
 .about-text-hours {
   text-align: center;
+  grid-column: 1/2;
 }
 
 .schedule {
@@ -371,10 +364,6 @@ nav {
 
 .hours {
   font-style: italic;
-}
-
-.about-btn-container .buttons {
-  color: white;
 }
 
 .carousel {
@@ -439,7 +428,7 @@ nav {
 }
 
 @media (max-width: 1200px) {
-  .about {
+  .about-content {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 2fr auto;
   }
@@ -455,10 +444,22 @@ nav {
   }
 }
 @media (max-width: 650px) {
-  .about {
+  .about-content {
     grid-template-rows: 1fr 1fr auto;
   }
 }
+.treatments-explore {
+  background-color: rgb(0, 0, 0);
+  padding: 1.5rem;
+  align-self: center;
+}
+
+.treatments-explore .primary-header {
+  color: rgb(255, 255, 255);
+  text-align: center;
+  letter-spacing: 3px;
+}
+
 .massages {
   background: url("../images/palm.png");
 }
@@ -496,18 +497,6 @@ nav {
   z-index: -5;
 }
 
-.treatments-explore {
-  background-color: black;
-  padding: 1.5rem;
-  align-self: center;
-}
-
-.treatments-explore .primary-header {
-  color: white;
-  text-align: center;
-  letter-spacing: 3px;
-}
-
 .treatments-btn-container {
   display: grid;
   gap: 1.25rem;
@@ -535,12 +524,12 @@ nav {
 .filter-btn.active {
   text-decoration: underline;
   background-color: rgb(216, 56, 123);
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 .black-line {
   padding: 1rem;
-  background-color: black;
+  background-color: rgb(0, 0, 0);
 }
 
 .content {
@@ -557,12 +546,14 @@ nav {
   gap: 1rem;
   grid-template-rows: auto auto 1fr;
   align-content: start;
-  border: 1px solid black;
+  border: 1px solid rgb(0, 0, 0);
   padding: 1rem;
   padding: clamp(1rem, 0.8rem + 1vw, 2rem);
   background: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(0.5rem);
   transition: 0.2s ease-in;
+  position: relative;
+  overflow: hidden;
 }
 
 .option .price {
@@ -576,14 +567,6 @@ nav {
 
 .option p {
   font-size: 0.8rem;
-}
-
-.option {
-  --left: 0px;
-  --top: 0px;
-  border: 1px solid black;
-  position: relative;
-  overflow: hidden;
 }
 
 .option::before {
@@ -646,11 +629,11 @@ nav {
 }
 
 .faq-question {
-  border: 1px solid black;
+  border: 1px solid rgb(0, 0, 0);
   margin: 1rem;
   width: 19rem;
   width: clamp(19rem, 12.8rem + 31vw, 50rem);
-  background-color: white;
+  background-color: rgb(255, 255, 255);
 }
 
 .faq-question-title p {
@@ -664,7 +647,7 @@ nav {
   display: flex;
   justify-content: space-between;
   font-weight: 700;
-  font-family: "Playfair display", "serif";
+  font-family: "Playfair Display", serif;
   letter-spacing: 2px;
 }
 
@@ -802,7 +785,7 @@ select {
   font-size: inherit;
   background-color: rgb(0, 0, 0);
   border: none;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 .btn-container {
@@ -828,7 +811,7 @@ select {
 #email::placeholder,
 #password::placeholder,
 #password2::placeholder {
-  color: black;
+  color: rgb(0, 0, 0);
 }
 
 .success-msg {
@@ -869,7 +852,7 @@ select {
 
 .update {
   background-color: rgb(0, 0, 0);
-  color: white;
+  color: rgb(255, 255, 255);
   border-radius: 5px;
   padding-inline: 5px;
 }
@@ -890,7 +873,7 @@ select {
   padding-bottom: clamp(0rem, -1.4rem + 7vw, 7rem);
 }
 
-.title {
+.reviews-title {
   padding-bottom: 1rem;
   font-size: 3rem;
 }
@@ -903,7 +886,7 @@ select {
 }
 
 .review .minor-header {
-  background-color: rgba(224, 53, 124, 0.137);
+  background-color: rgb(255, 230, 240);
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
 }
@@ -926,7 +909,7 @@ select {
   top: 50%;
   z-index: 5;
   transform: translateY(-50%);
-  color: rgb(224, 53, 124);
+  color: rgb(216, 56, 123);
   cursor: pointer;
   border-radius: 0.25rem;
   padding: 0 1rem;
@@ -971,8 +954,8 @@ select {
   place-items: center;
   border-radius: 50%;
   transform: translateY(25%);
-  background: rgb(224, 53, 124);
-  color: black;
+  background: rgb(216, 56, 123);
+  color: rgb(0, 0, 0);
 }
 
 .stars {
@@ -984,8 +967,8 @@ select {
 }
 
 footer {
-  background-color: black;
-  color: white;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   display: grid;
   grid-template-columns: 1fr 1fr 1.5fr;
   align-items: start;
@@ -1010,7 +993,7 @@ footer a {
 
 .footer-title {
   padding-bottom: 0.35rem;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid rgb(255, 255, 255);
   line-height: 1.5;
 }
 
@@ -1020,9 +1003,15 @@ footer a {
   padding-top: 0.45rem;
 }
 
+.page-nav {
+  background-color: rgb(0, 0, 0);
+}
+
 .page {
+  display: grid;
+  gap: 2rem;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr auto auto 0.5fr;
+  text-align: center;
   margin: 0;
   padding: 0;
   text-align: center;
@@ -1030,6 +1019,9 @@ footer a {
 .page .carousel {
   grid-column: 1;
   grid-row: 3/4;
+}
+.page .about {
+  grid-template-rows: 1fr auto auto 0.5fr;
 }
 .page .about-btn-container {
   justify-content: center;
@@ -1082,32 +1074,34 @@ footer a {
   font-family: serif;
 }
 
-.page-nav {
-  background-color: black;
-}
-
 @media (min-width: 800px) {
   .page {
     grid-template-rows: 1fr auto auto 1fr;
   }
 }
+.amenities.page {
+  grid-template-rows: 1fr;
+}
 .amenities.page .page-hero {
   background-image: url("../images/bath-interior.jpg");
 }
-
-.amenities-text {
-  padding: 1rem;
+.amenities.page .about-btn-container {
+  padding-block: 1rem;
 }
 
-.amenities-main > .description-text {
-  padding-block: 1rem 2rem;
-  margin: auto;
-  padding-inline: 1rem;
+@media (min-width: 800px) {
+  .amenities.page {
+    grid-template-rows: 1fr auto;
+  }
 }
-
 .text > .description-text {
   font-size: 0.65rem;
   font-size: clamp(0.65rem, 0.58rem + 0.35vw, 1rem);
+}
+
+.amenities-main {
+  display: grid;
+  gap: 1rem;
 }
 
 .amenities-pictures {
@@ -1196,14 +1190,27 @@ footer a {
     min-width: 200px;
   }
 }
-.services .treatments-background-img {
-  display: none;
+.services.page {
+  grid-template-rows: 1fr auto;
 }
-
 .services.page .page-hero {
   background-image: url("../images/girl-menu.jpg");
 }
+.services.page .treatments-btn-container {
+  display: flex;
+  padding-top: 0rem;
+}
+.services.page .treatments-group {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+}
 
+@media (min-width: 800px) {
+  .services.page {
+    grid-template-rows: 1fr auto;
+  }
+}
 .modal-container {
   position: fixed;
   top: 50%;

@@ -1,3 +1,5 @@
+@use 'root';
+
 // ***********************
 // booking section styling  
 // ***********************
@@ -45,9 +47,9 @@
     margin: 0 auto;
     text-align: center;
     font-size: 2rem;
-    font-family: 'Playfair Display',serif;
+    font-family: root.$secondary-font;
     letter-spacing: 2px;
-    border-bottom: 1px solid rgba(0, 0, 0);
+    border-bottom: 1px solid root.$neutral-black;
     margin-bottom: 1rem;
 }
 
@@ -99,9 +101,9 @@ select {
     margin-top: .8rem;
     padding: .5rem 1rem;
     font-size: inherit;
-    background-color: rgb(0, 0, 0);
+    background-color: root.$neutral-black;
     border: none;
-    color: white;
+    color: root.$neutral-white;
 }
 
 .btn-container {
@@ -127,7 +129,7 @@ select {
 #email::placeholder,
 #password::placeholder, 
 #password2::placeholder {
-    color: black;
+    color: root.$neutral-black;
 }
 
 .success-msg {
@@ -138,7 +140,7 @@ select {
 }
 
 .success-title {
-    font-family:'Playfair Display',serif;
+    font-family: root.$secondary-font;
     font-size: 1.8rem;
     z-index: 100;
     max-width: 350px;
@@ -168,8 +170,8 @@ select {
 }
 
 .update {
-    background-color: rgba(0, 0, 0);
-    color: white;
+    background-color: root.$neutral-black;
+    color: root.$neutral-white;
     border-radius: 5px;
     padding-inline: 5px;
 }

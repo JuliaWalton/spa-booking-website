@@ -1,3 +1,4 @@
+@use 'root';
 // *******************
 // FAQ section styling
 // *******************
@@ -26,11 +27,11 @@
 }
 
 .faq-question {
-    border: 1px solid black;
+    border: 1px solid root.$neutral-black;
     margin: 1rem;
     width: 19rem;
     width: clamp(19rem, 12.8rem + 31vw, 50rem);
-    background-color: white;
+    background-color: root.$neutral-white;
 }
 
 .faq-question-title p {
@@ -44,7 +45,7 @@
     display: flex;
     justify-content: space-between;
     font-weight: 700;
-    font-family: 'Playfair display', 'serif';
+    font-family: root.$secondary-font;
     letter-spacing: 2px;
 }
 
@@ -71,13 +72,13 @@
 }
 
 .faq-question.show-answer {
-    border: 1px solid rgb(216, 56, 123);
-    color:rgb(216, 56, 123);
-    background-color: rgb(255, 230, 240);
+    border: 1px solid root.$primary-accent-color;
+    color: root.$primary-accent-color;
+    background-color: root.$tertiary-accent-color;
 }
 
 .faq-question.show-answer .faq-question-btn {
-    color: rgb(216, 56, 123);
+    color: root.$primary-accent-color;
 }
 
 @media (max-width: 800px) {

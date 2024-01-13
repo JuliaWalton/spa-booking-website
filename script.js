@@ -85,7 +85,8 @@ function displayItems(array) {
     })
 }
 
-btnContainer.addEventListener('click', (e) => {
+function filterTreatments() {
+    btnContainer.addEventListener('click', (e) => {
     fetch('treatments-data.json')
     .then(res => res.json())
     .then(data => {
@@ -106,6 +107,8 @@ btnContainer.addEventListener('click', (e) => {
         }
     })
 })
+}
+
 
 filterBtns.forEach((btn) => {
     btn.addEventListener('click', (e) => {
@@ -119,7 +122,7 @@ filterBtns.forEach((btn) => {
     })
 })
 
-window.addEventListener('DOMContentLoaded', (e) => {
+function fetchTreatments() {
     fetch('treatments-data.json')
     .then(res => res.json())
     .then(data => {
@@ -153,7 +156,7 @@ window.addEventListener('DOMContentLoaded', (e) => {
             })
         })
     })
-});
+};
 // end of treatment card functionality
 
 
@@ -181,7 +184,8 @@ const serviceSelect = document.getElementById('service');
 const serviceSpecifySelect = document.getElementById('service-specify');
 
 // populate service options for select input
-serviceSelect.addEventListener('change', (e) => {
+function populateSelect() {
+    serviceSelect.addEventListener('change', (e) => {
     // console.log(e.target.value);
     let val = e.target.value;
     switch (val) {
@@ -231,6 +235,8 @@ serviceSelect.addEventListener('change', (e) => {
     }
 })
 
+}
+
 
 const form = document.querySelector('.form')
 const fnameInput = document.getElementById('fname');
@@ -261,12 +267,12 @@ function getFieldName(input) {
 }
 
 // date input validation - enable only current date and 2 yrs beyond to be selected
-let today = new Date().toISOString().slice(0, 10);
-dateInput.setAttribute('min', today);
+
 // console.log(dateInput)
 // console.log(dateInput.getAttribute('min'))
 
 function checkDate(dateInput) {
+
     let today = new Date().toISOString().slice(0, 10);
     dateInput.setAttribute('min', today);
     let oneYearFromNow = new Date().getFullYear();
@@ -359,7 +365,6 @@ let incrementor;
 let validation = true;
 
 function nextStep() {
-
 const inputs = [...formSteps[currentStep].querySelectorAll('input')];
 const selects = [...formSteps[currentStep].querySelectorAll('select')];
 
@@ -419,8 +424,10 @@ const selects = [...formSteps[currentStep].querySelectorAll('select')];
 const nextBtn = document.querySelector('[data-next]');
 const prevBtn = document.querySelector('[data-previous]');
 const submitBtn = document.querySelector('[data-submit]');
+const update = document.querySelector('.update');
 
-nextBtn.addEventListener('click', (e) => {
+function formButtons() {
+    nextBtn.addEventListener('click', (e) => {
     nextStep();
     
     if (validation === true) {
@@ -436,8 +443,6 @@ prevBtn.addEventListener('click', (e) => {
     showCurrentStep();
 })
 
-const update = document.querySelector('.update');
-
 submitBtn.addEventListener('click', (e) => {
     validation = false;
     nextStep();
@@ -449,6 +454,8 @@ submitBtn.addEventListener('click', (e) => {
     showCurrentStep();
     }
 })
+}
+
 // end of booking functionality
 
 
@@ -525,8 +532,45 @@ prevBtnRev.addEventListener('click', () => {
     showPerson();
 })
 
-window.addEventListener('DOMContentLoaded', () => {
-    showPerson();
-})
+// window.addEventListener('DOMContentLoaded', () => {
+//     showPerson();
+// })
 // end of reviews functionality
 
+
+const globalState = {
+    currentPage: window.location.pathname,
+};
+
+// Below is a router, so wherever we want to run a function in response to a certain page, we'll put it inside that corresponding case
+
+// Init app
+function init() {
+    switch(globalState.currentPage) {
+        case '/':
+        case '/index.html':
+            fetchTreatments();
+            filterTreatments();
+            formButtons()
+            populateSelect();
+            showPerson();
+            break;
+        case '/services.html':
+            fetchTreatments();
+            filterTreatments()
+            break;
+        case '/amenities.html':
+            // displayMovieDetails();
+            break;
+        case '/about.html':
+            showPerson();
+            break;
+        // case '/search.html':
+        //     console.log('Search');
+        //     break;
+    }
+
+    // highlightActiveLink();
+}
+
+document.addEventListener('DOMContentLoaded', init);

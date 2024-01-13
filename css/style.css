@@ -1184,6 +1184,10 @@ footer a {
     min-width: 200px;
   }
 }
+.services .treatments-background-img {
+  display: none;
+}
+
 .services.page .page-hero {
   background-image: url("../images/girl-menu.jpg");
 }

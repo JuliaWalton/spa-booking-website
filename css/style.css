@@ -161,6 +161,10 @@ button {
   text-decoration: underline;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .hero {
   background-color: rgba(0, 0, 0, 0.1);
   background-image: url("../images/hero-img.jpg");
@@ -1211,7 +1215,7 @@ footer a {
     grid-template-rows: 1fr auto;
   }
 }
-.modal-container {
+.modal-overlay {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -1223,7 +1227,7 @@ footer a {
   text-align: left;
 }
 
-.modal-container.show-modal {
+.modal-overlay.show-modal {
   display: grid;
 }
 

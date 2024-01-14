@@ -1,5 +1,5 @@
 
-.modal-container {
+.modal-overlay {
     // position: -webkit-sticky;
     position: fixed;
     top: 50%;
@@ -17,7 +17,7 @@
     text-align: left;
 }
 
-.modal-container.show-modal {
+.modal-overlay.show-modal {
     display: grid;
 }
 

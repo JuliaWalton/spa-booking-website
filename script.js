@@ -24,7 +24,7 @@ window.addEventListener('scroll', () => {
 const globalState = {
     currentPage: window.location.pathname,
 };
-
+console.log(globalState)
 
 function highlightActiveLink() {
     const navLinks = document.querySelectorAll('.nav-link');
@@ -570,6 +570,7 @@ reserveLinks.forEach((link) => {
         const keyword = e.currentTarget.getAttribute('href').slice(1);
         console.log(keyword);
         const corresponding = document.getElementById(keyword);
+        console.log(corresponding)
 
         const navHeight = nav.getBoundingClientRect().height;
         console.log(navHeight);
@@ -577,6 +578,7 @@ reserveLinks.forEach((link) => {
         const fixedNav = nav.classList.contains('fixed');
         // const fixedNavHeight = fixedNav.getBoundingClientRect().height;
         let position = corresponding.offsetTop - navHeight;
+        console.log(position)
         // if (!fixedNav) {
         //     position = position - navHeight;
         // } 
@@ -584,10 +586,10 @@ reserveLinks.forEach((link) => {
             position = position + (containerHeight + containerHeight);
         } 
         if (!fixedNav) {
-            position = position - (navHeight - 30);
+            position = position - (navHeight - 100);
         }
         if (fixedNav) {
-            position = position - navHeight;
+            position = position - (navHeight - 50);
         }
 
         window.scrollTo ({
@@ -606,7 +608,7 @@ reserveLinks.forEach((link) => {
 
 
 const modalCloseBtn = document.querySelector('.modal-close-btn');
-const modal = document.querySelector('.modal-container');
+const modal = document.querySelector('.modal-overlay');
 const activateModalBtn = document.querySelector('.activate-modal-btn');
 const navReserveBtn = document.querySelector('.nav-reserve-btn')
 
@@ -646,33 +648,34 @@ function bookingModal() {
 
 
 // Below is a router, so wherever we want to run a function in response to a certain page, we'll put it inside that corresponding case
-
+// console.log((globalState.currentPage))
 // Init app
 function init() {
     switch(globalState.currentPage) {
-        case '/':
+        // case '/':
         case '/index.html':
             fetchTreatments();
             filterTreatments();
-            scrollBooking()
-            formButtons()
+            scrollBooking();
+            formButtons();
             populateSelect();
             showReviews();
             break;
         case '/services.html':
             fetchTreatments();
-            filterTreatments()
+            filterTreatments();
+            formButtons();
+            populateSelect();
             showReviews();
             break;
         case '/amenities.html':
-            // displayMovieDetails();
-            bookingModal()
-            formButtons()
+            bookingModal();
+            formButtons();
             populateSelect();
             break;
         case '/about.html':
-            bookingModal()
-            formButtons()
+            bookingModal();
+            formButtons();
             populateSelect();
             break;
     }

@@ -612,7 +612,7 @@ const modal = document.querySelector('.modal-overlay');
 const activateModalBtn = document.querySelector('.activate-modal-btn');
 const navReserveBtn = document.querySelector('.nav-reserve-btn')
 
-if(globalState !== '/index.html') {
+if(globalState !== '/index.html' || globalState !== '/spa-selene/' || globalState !== '/#reserve') {
     navReserveBtn.addEventListener('click', () => {
     modal.classList.add('show-modal')
     })

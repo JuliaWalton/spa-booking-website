@@ -1,5 +1,3 @@
-
-
 // navigation toggle for mobile + fixed nav
 const navToggle = document.querySelector('.nav-toggle');
 const nav = document.querySelector('.nav');
@@ -19,17 +17,16 @@ window.addEventListener('scroll', () => {
     }
 })
 
-
-// highlight active link
+// highlight active nav link
 const globalState = {
     currentPage: window.location.pathname,
 };
-console.log(globalState)
 
 function highlightActiveLink() {
     const navLinks = document.querySelectorAll('.nav-link');
+
     navLinks.forEach((link) => {
-        if (link.getAttribute('href') === globalState.currentPage) {
+        if ('/' + link.getAttribute('href') === globalState.currentPage || '/spa-selene/' + link.getAttribute('href') === globalState.currentPage) {
             link.classList.add('current-link');
         }
     });
@@ -38,7 +35,8 @@ function highlightActiveLink() {
 // carousel image slider
 const buttons = document.querySelectorAll('[data-carousel-button]');
 
-buttons.forEach(button => {
+function carouselSlider() {
+    buttons.forEach(button => {
     button.addEventListener('click', () => {
         // const offset = button.dataset.carouselButton;
         // console.log(offset);
@@ -60,6 +58,8 @@ buttons.forEach(button => {
         delete activeSlide.dataset.active;
     })
 })
+}
+
 
 
 // treatment menu cards, populate category on click
@@ -209,45 +209,44 @@ function populateSelect() {
         case "item1":
             serviceSpecifySelect.innerHTML = 
                 `<option value="none">--specify a type--</option>
-                <option value="massage1">aromatherapy massage</option>
-                <option value="massage2">fire and ice massage</option>
-                <option value="massage3">prenatal massage</option>
-                <option value="massage4">foot massage</option>
-                <option value="massage5">couples massage</option>`
+                <option value="massage1">fire and ice massage</option>
+                <option value="massage2">therapeutic massage</option>
+                <option value="massage3">aromatherapy massage</option>
+                <option value="massage4">prenatal massage</option>
+                <option value="massage5">deep tissue massage</option>`
             break;
         case "item2":
             serviceSpecifySelect.innerHTML = 
                 `<option value="none">--specify a type--</option>
                 <option value="skincare1">hydrating & brightening facial</option>
-                <option value="skincare2">texture balance + oil control facial</option>
+                <option value="skincare2">texture balance facial</option>
                 <option value="skincare3">pore extraction and acne facial</option>
                 <option value="skincare4">anti-aging red LED therapy</option>
-                <option value="skincare5">wax treatments</option>`
+                <option value="skincare5">celebrity facial</option>`
             break;
         case "item3":
             serviceSpecifySelect.innerHTML = 
                 `<option value="none">--specify a type--</option>
-                <option value="haircare1">deep conditioning treatment</option>
-                <option value="haircare2">simple trim + styling</option>
+                <option value="haircare1">special occasion style</option>
+                <option value="haircare2">women's hair cut</option>
                 <option value="haircare3">cut and color</option>
                 <option value="haircare4">blowout</option>`
             break;
         case "item4":
             serviceSpecifySelect.innerHTML = 
                 `<option value="none">--specify a type--</option>
-                <option value="gentlemen1">haircut and clean shave</option>
-                <option value="gentlemen2">hot wax brow and beard shaping</option>
-                <option value="gentlemen3">anti-aging lymphatic massage + facial</option>
-                <option value="gentlemen4">master sports massage</option>
-                <option value="gentlemen5">couples massage</option>`
+                <option value="gentlemen1">groom's wedding day prep</option>
+                <option value="gentlemen2">anti-aging facial</option>
+                <option value="gentlemen3">the beard facial</option>
+                <option value="gentlemen4">deep tissue sports massage</option>`
             break;
         case "item5":
             serviceSpecifySelect.innerHTML = 
                 `<option value="none">--specify a type--</option>
-                <option value="package1">bridal pamper package</option>
-                <option value="package2">best for mom package</option>
-                <option value="package3">couples paradise package</option>
-                <option value="package4">men's selfcare package</option>`
+                <option value="package1">mom-knows-best package</option>
+                <option value="package2">bridal pamper package</option>
+                <option value="package3">couples massage</option>
+                <option value="package4">husband and wife to-be package</option>`
             break;
     }
 })
@@ -655,6 +654,7 @@ function init() {
         case '/spa-selene/':
         case '/spa-selene/index.html':
         case '/index.html':
+            carouselSlider()
             fetchTreatments();
             filterTreatments();
             scrollBooking();
@@ -671,13 +671,14 @@ function init() {
             showReviews();
             break;
         case '/amenities.html':
-        case '/amenities.html':
+        case '/spa-selene/amenities.html':
             bookingModal();
             formButtons();
             populateSelect();
             break;
         case '/about.html':
         case '/spa-selene/about.html':
+            carouselSlider()
             bookingModal();
             formButtons();
             populateSelect();

@@ -1,17 +1,20 @@
 @use 'root';
-// *********************
+// *******************************************
 // about section styling  
-// *********************
+// *******************************************
 
 .about-content {
+$padding-block: clamp(1rem, -0.19999999999999996rem + 6vw, 7rem);
+$padding-inline: clamp(1rem, 0.19999999999999996rem + 4vw, 5rem);
+
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
 
     padding-block: 1rem;
-    padding-block: clamp(1rem, -0.19999999999999996rem + 6vw, 7rem);
+    padding-block: $padding-block;
     padding-inline: 1rem;
-    padding-inline:clamp(1rem, 0.19999999999999996rem + 4vw, 5rem);
+    padding-inline: $padding-inline;
 }
 
 .about-text {
@@ -53,10 +56,9 @@
     font-style: italic;
 }
 
-
-// **************************
+// *******************************************
 // about section img carousel  
-// **************************
+// *******************************************
 
 .carousel {
     grid-column: 2/3;

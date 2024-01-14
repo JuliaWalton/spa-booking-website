@@ -1,9 +1,12 @@
-// @use 'root'; 
+@use 'root';
+// *******************************************
+// Amenities Page Styling  
+// *******************************************
 
 .amenities.page {
     grid-template-rows: 1fr;
 
-        .page-hero {
+    .page-hero {
         background-image: url("../images/bath-interior.jpg");
     }
     .about-btn-container {
@@ -11,16 +14,6 @@
     }
 }
 
-@media (min-width: 800px) {
-    .amenities.page {
-        grid-template-rows: 1fr auto;
-    }
-}
-
-.text > .description-text {
-    font-size: 0.65rem;
-    font-size: clamp(0.65rem, 0.5800000000000001rem + 0.35vw, 1rem);
-}
 .amenities-main {
     display: grid;
     gap: 1rem;
@@ -33,11 +26,6 @@
     margin-bottom: clamp(3rem, 2.6rem + 2vw, 5rem);
 }
 
-.txt-title {
-    font-size: 0.8rem;
-    font-size: clamp(0.8rem, 0.66rem + 0.7vw, 1.5rem);
-}
-
 .amenities-img-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -47,22 +35,6 @@
     height: 31.25rem;
     height: clamp(31.25rem, 27.5rem + 18.75vw, 50rem);
 }
-
-.txt-title {
-    padding-bottom: .5rem;
-    font-weight: bold;
-}
-// .maybe {
-//     width: 1200px;
-//     height: 700px;
-// }
-
-// .amenities-img-grid > div {
-//     max-height: 500px;
-//     width: 100%;
-//     max-width: 100%;
-//     object-fit: cover;
-// }
 
 .amenities-background {
     background-size: cover;
@@ -76,25 +48,20 @@
 .img-1 {
     background-image: url("../images/amenities-pool.jpg");
 }
+
 .img-2 {
     background-image: url("../images/amenities-skincare.jpg");
 }
-    
+
 .img-3 {
     background-image: url("../images/amenities-garden.jpg");
 }
+
 .img-4 {
     background-image: url("../images/amenities-drinks.jpg");
 }
 
-// .amenities-background:hover {
-//     background-color: rgba(0, 0, 0, 0.5);
-//     background-blend-mode: multiply;
-//     // filter: blur(.2rem);
-// }
-
 .overlay {
-    // position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
@@ -105,15 +72,13 @@
     transition: .5s ease;
     background-color:rgba(0, 0, 0, 0.65);
     position: relative;
-    // background-color: rgba(0, 0, 0, 0.5);
-    // background-blend-mode: multiply;
 }
 
 .amenities-background:hover .overlay {
     opacity: 1;
 }
 
-.text{
+.hover-text {
     z-index: 5;
     color: white;
     position: absolute;
@@ -122,12 +87,29 @@
     transform: translate(-50%, -50%);
 }
 
+.txt-title {
+    font-size: 0.8rem;
+    font-size: clamp(0.8rem, 0.66rem + 0.7vw, 1.5rem);
+    padding-bottom: .5rem;
+    font-weight: bold;
+}
+
+.hover-text > .description-text {
+    font-size: 0.65rem;
+    font-size: clamp(0.65rem, 0.5800000000000001rem + 0.35vw, 1rem);
+}
+
+@media (min-width: 800px) {
+    .amenities.page {
+        grid-template-rows: 1fr auto;
+    }
+}
 
 @media (max-width: 600px) {
-.amenities-img-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        height: 1000px;
-        min-width: 200px;
-}
+    .amenities-img-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            height: 1000px;
+            min-width: 200px;
+    }
 }

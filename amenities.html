@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,12 +17,10 @@
 <!-- fontawesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
 <title>Spa Selene</title>
-
 </head>
 
 <body>
     <nav class="nav page-nav">
-        <!-- <div class="nav-center"> -->
             <div class="nav-header">
                 <a class="nav-logo" href="index.html">
                     <img src="images/logo.png" width="120" alt="home">
@@ -48,11 +45,9 @@
                     </ul>
                 </div>
             </div>
-        <!-- </div> -->
     </nav>
     <article class="amenities page">
         <div class="page-hero">
-            <!-- <img class="hero-img" src="images/bath-interior.jpg" alt="interior of a private bath"> -->
             <h4 class="primary-header page-title">Amenities</h4>
         </div>
 
@@ -69,17 +64,16 @@
                         <a class="buttons reserve activate-modal-btn">Book Treatment</a>
                         <a class="buttons" href="services.html">Explore Menu</a>
                     </div>
-                <!-- <h2>"The time to relax is when you have no time for it"</h2>
-                    <small>- Sydney J. Harris</small> -->
             </div>
         </div>
         
         <section class="amenities-pictures">
             <h2 class="primary-header">What to Expect</h2><br>
             <div class="amenities-img-grid">
+                <!-- start of image grid -->
                 <div class="amenities-background img-1">
                     <div class="overlay">
-                        <div class="text">
+                        <div class="hover-text">
                             <p class="txt-title">State of the Art Facilities</p>
                             <p class="description-text">
                                 Our spa features modern designs with luxurious finishes. We invite you to utilize our pool, hot tub, and steam
@@ -89,7 +83,7 @@
                 </div>
                 <div class="amenities-background img-2">
                     <div class="overlay">
-                        <div class="text">
+                        <div class="hover-text">
                             <p class="txt-title">Medical Grade Products </p>
                             <p class="description-text">
                                 We take pride in selecting the finest products for our treatments. Select products used are available for purchase
@@ -100,7 +94,7 @@
                 </div>
                 <div class="amenities-background img-3">
                     <div class="overlay">
-                        <div class="text">
+                        <div class="hover-text">
                             <p class="txt-title">Yoga in the Garden</p>
                             <p class="description-text">
                                 Spa Selene is excited to host Free-Yoga-Friday's in our garden for the members of our spa community. This all-levels
@@ -110,7 +104,7 @@
                 </div>
                 <div class="amenities-background img-4">
                     <div class="overlay">
-                        <div class="text">
+                        <div class="hover-text">
                             <p class="txt-title">Complimentary Beverages & Bites</p>
                             <p class="description-text">
                                 Guests of Spa Selene are welcome to indulge in a selection of wine, coffee, tea, and healthy food options. Menu's
@@ -118,10 +112,11 @@
                         </div>
                     </div>
                 </div>
+                <!-- end of image grid -->
             </div>
         </section>
 
-        <!-- modal -->
+        <!-- booking modal -->
         <div class="modal-overlay">
             <div class="modal-container">
                 <form class="form" data-multi-step>
@@ -135,15 +130,9 @@
                             <small>Error Message</small>
                             <input class="required" type="number" id="guests" name="booking" min="1" max="10"
                                 placeholder="Number of Guests">
-                            <!-- https://stackoverflow.com/questions/44860250/browser-validation-message-min-max -->
                         </div>
                         <div class="form-group">
-                            <!-- https://stackoverflow.com/questions/7488968/html-css-nested-options-in-a-select-field -->
-                            <!-- https://stackoverflow.com/questions/4480637/how-to-change-a-selections-options-based-on-another-select-option-selected -->
-                            <!-- https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/change_event -->
                             <label for="service">What can we do for you?</label>
-                
-                
                             <small>Error Message</small>
                             <select class="required" type="list" id="service" name="booking">
                                 <option value="none">--Select a Service--</option>
@@ -156,7 +145,7 @@
                 
                             <select class="required" type="list" id="service-specify" name="booking">
                                 <option value="none">--specify a type--</option>
-                                <!-- inserted dynamically -->
+                                <!-- content inserted dynamically -->
                             </select>
                 
                         </div>
@@ -257,10 +246,8 @@
             </div>
         </div>
         <!-- end of modal -->
-
-
-
     </article>
+
     <footer>
         <a href="/index.html">
             <img src="images/logo.png" alt="home">
@@ -273,7 +260,6 @@
             <li>Dallas, TX 75206</li>
             <li>Phone: 000.000.0000</li>
         </ul>
-    
         <div class="footer-note">
             <p class="footer-title">APPOINTMENTS & GIFT CARDS</p>
             <p>Please book online to schedule your Spa Selene experience today. Check out our social media to hear first
@@ -289,5 +275,4 @@
 
     <script src="script.js"></script>
 </body>
-
 </html>

@@ -1,4 +1,7 @@
 @use 'root';
+// *******************************************
+// Services Page Styling
+// *******************************************
 
 .services.page {
 grid-template-rows: 1fr auto;
@@ -14,24 +17,13 @@ grid-template-rows: 1fr auto;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto 1fr;
-        
     }
 }
 
 @media (min-width: 800px) {
     .services.page {
         grid-template-rows: 1fr auto;
-        // color:red;
     }
-    // .treatments-group {
-    //     display: grid;
-    //     grid-template-columns: 1fr;
-    //     grid-template-rows: auto 1fr;
-    //     color: red;
-    // }
-    // .filter-btn {
-    //     color: red;
-    // }
 }
 
 

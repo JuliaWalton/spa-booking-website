@@ -1,24 +1,17 @@
-/*
-  1. Use a more-intuitive box-sizing model.
-*/
+// *******************************************
+// CSS RESET
+// *******************************************
+
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
 
-/*
-  2. Remove default margin
-*/
 * {
     margin: 0;
 }
 
-/*
-  Typographic tweaks!
-  3. Add accessible line-height
-  4. Improve text rendering
-*/
 body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
@@ -32,9 +25,7 @@ body {
   background-size: cover;
   overflow: auto;
 }
-/*
-  5. Improve media defaults
-*/
+
 img,
 picture,
 video,
@@ -45,9 +36,6 @@ svg {
     height: auto;
 }
 
-/*
-  6. Remove built-in form typography styles
-*/
 input,
 button,
 textarea,
@@ -55,9 +43,6 @@ select {
     font: inherit;
 }
 
-/*
-  7. Avoid text overflows
-*/
 p,
 h1,
 h2,
@@ -66,6 +51,10 @@ h4,
 h5,
 h6 {
     overflow-wrap: break-word;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 a {
@@ -79,23 +68,17 @@ ul {
   padding: 0;
 }
 
-// ::-webkit-scrollbar {
-//   overflow-y: scroll;
-// }
-
-/*** Works on common browsers ***/
+// custom highlight color
 ::selection {
   background-color: rgb(216, 56, 123);
   color: #fff;
 }
 
-/*** Mozilla based browsers ***/
 ::-moz-selection {
   background-color: rgb(216, 56, 123);
   color: #fff;
 }
 
-/***For Other Browsers ***/
 ::-o-selection {
   background-color: rgb(216, 56, 123);
   color: #fff;
@@ -106,7 +89,6 @@ ul {
   color: #fff;
 }
 
-/*** For Webkit ***/
 ::-webkit-selection {
   background-color: rgb(216, 56, 123);
   color: #fff;

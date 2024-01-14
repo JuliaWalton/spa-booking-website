@@ -1,7 +1,7 @@
 @use 'root';
-// *******************
+// *******************************************
 // FAQ section styling
-// *******************
+// *******************************************
 
 .faq {
     display: grid;
@@ -27,16 +27,17 @@
 }
 
 .faq-question {
-    border: 1px solid root.$neutral-black;
-    margin: 1rem;
+    background-color: root.$neutral-white;
     width: 19rem;
     width: clamp(19rem, 12.8rem + 31vw, 50rem);
-    background-color: root.$neutral-white;
+    border: 1px solid root.$neutral-black;
+    margin: 1rem;
 }
 
+// use font size variable
 .faq-question-title p {
-    font-size: 1.2rem;
-    font-size: clamp(1.2rem, 1.04rem + 0.8vw, 2rem);
+    font-size: 0.75rem;
+    font-size: root.$font-reg-clamp;
     padding: 2rem;
     text-align: start;
 }
@@ -55,7 +56,7 @@
     text-align: left;
     padding: 0rem 2rem 2rem 2rem;
     font-size: 0.75rem;
-    font-size: clamp(0.75rem, 0.65rem + 0.5vw, 1.25rem);
+    font-size: root.$font-reg-clamp;
 }
 
 .faq-question.show-answer .faq-question-text {
@@ -85,5 +86,6 @@
     .faq {
         background-size: 40%;
         background-position: -5% -5%;
+        margin-bottom: 10rem;
     }
 }

@@ -1,14 +1,14 @@
 @use 'root';
 
-// ***********************
+// *******************************************
 // booking section styling  
-// ***********************
+// *******************************************
 
 .booking {
     display: grid;
-    margin:auto;
     place-content: center;
     place-items: center;
+    margin:auto;
     margin-block: 3rem;
     margin-block: clamp(2rem, 2.2rem + 4vw, 8rem);
     position: relative;
@@ -17,48 +17,43 @@
 
 .booking-bg {
     position: absolute;
-    // background-color: purple;
     background-image: url("../images/monstera.png");
+    background-repeat: no-repeat; 
+    background-size: 100%;
     width: 700px;
     height: 700px;
     bottom: 20px;
     left: -70px;
-    background-repeat: no-repeat; 
-    background-size: 100%;
-    
     z-index: -5;
 }
 
 .booking-bg2 {
     position: absolute;
-    // background-color: pink;
     background-image: url("../images/lotus.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
     width: 400px;
     height: 320px;
     bottom: 0;
     right: 200px;
-    background-repeat: no-repeat;
-    background-size: 100%;
     z-index: -5;
 }
 
 .step-title {
-    justify-content: center;
-    margin: 0 auto;
-    text-align: center;
-    font-size: 2rem;
     font-family: root.$secondary-font;
+    font-size: 2rem;
+    margin: 0 auto;
     letter-spacing: 2px;
     border-bottom: 1px solid root.$neutral-black;
     margin-bottom: 1rem;
 }
 
 .form-card {
+    display: none;
     background-color: rgb(247, 172, 203);
     box-shadow: 10px 5px 20px rgb(87, 87, 87, .5);
     padding-block: 2rem;
     padding-inline: clamp(4rem, 3.4rem + 3vw, 7rem);
-    display: none;
     max-width: 700px;
     border-radius: 2rem;
 }
@@ -77,14 +72,14 @@
     margin: 0;
 }
 
-.form-group>label {
-    font-size: 1.2rem;
+.form-group > label {
+    font-size: root.$font-reg-clamp;
 }
 
 input,
 select {
-    margin-top: .5rem;
     font-size: 1rem;
+    margin-top: .5rem;
     padding: .5em .75em;
 }
 

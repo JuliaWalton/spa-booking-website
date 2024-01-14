@@ -1,16 +1,12 @@
 @use 'root';
 // *******************************************
-// SASS variables 
-// *******************************************
-
-
-// *******************************************
 // global styles
 // *******************************************
 
 body {
     font-family: root.$primary-font;
-    font-size: 1.2rem;
+    font-size: 0.75rem;
+    font-size: root.$font-reg-clamp;
     color: root.$neutral-black;
 }
 
@@ -34,10 +30,10 @@ button {
     background-color: root.$primary-accent-color;
 }
 
-.description-text {
-    font-size: 0.75rem;
-    font-size: clamp(0.75rem, 0.65rem + 0.5vw, 1.25rem);
-}
+// .description-text {
+//     font-size: 0.75rem;
+//     font-size: clamp(0.75rem, 0.65rem + 0.5vw, 1.25rem);
+// }
 
 .primary-header {
     font-size: 1.8rem;
@@ -60,6 +56,3 @@ button {
     text-decoration: underline;
 }
 
-html {
-    scroll-behavior: smooth;
-}

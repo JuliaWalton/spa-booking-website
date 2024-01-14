@@ -1,4 +1,7 @@
 @use 'root';
+// *******************************************
+// Footer styling
+// *******************************************
 
 footer {
     background-color: root.$neutral-black;
@@ -20,7 +23,6 @@ footer a {
 }
 
 .footer-contact {
-    // display: grid;
     list-style-type: none;
     align-self: start;
     justify-self: start;
@@ -28,7 +30,6 @@ footer a {
 
 .footer-title {
     padding-bottom: .35rem;
-    // text-decoration: underline;
     border-bottom: 1px solid root.$neutral-white;
     line-height: 1.5;
 

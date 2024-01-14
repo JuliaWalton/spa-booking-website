@@ -652,8 +652,9 @@ function bookingModal() {
 // Init app
 function init() {
     switch(globalState.currentPage) {
-        // case '/':
+        case '/spa-selene/':
         case '/index.html':
+        case '/#reserve':
             fetchTreatments();
             filterTreatments();
             scrollBooking();

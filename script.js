@@ -586,10 +586,10 @@ reserveLinks.forEach((link) => {
             position = position + (containerHeight + containerHeight);
         } 
         if (!fixedNav) {
-            position = position - (navHeight - 100);
+            position = position - (navHeight - 50);
         }
         if (fixedNav) {
-            position = position - (navHeight - 50);
+            position = position - (navHeight);
         }
 
         window.scrollTo ({
@@ -653,8 +653,8 @@ function bookingModal() {
 function init() {
     switch(globalState.currentPage) {
         case '/spa-selene/':
+        case '/spa-selene/index.html':
         case '/index.html':
-        case '/#reserve':
             fetchTreatments();
             filterTreatments();
             scrollBooking();
@@ -663,6 +663,7 @@ function init() {
             showReviews();
             break;
         case '/services.html':
+        case '/spa-selene/services.html':
             fetchTreatments();
             filterTreatments();
             formButtons();
@@ -670,11 +671,13 @@ function init() {
             showReviews();
             break;
         case '/amenities.html':
+        case '/amenities.html':
             bookingModal();
             formButtons();
             populateSelect();
             break;
         case '/about.html':
+        case '/spa-selene/about.html':
             bookingModal();
             formButtons();
             populateSelect();

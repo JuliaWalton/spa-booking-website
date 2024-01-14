@@ -42,6 +42,9 @@
 .step-title {
     font-family: root.$secondary-font;
     font-size: 2rem;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
     margin: 0 auto;
     letter-spacing: 2px;
     border-bottom: 1px solid root.$neutral-black;
@@ -110,7 +113,6 @@ select {
 .form-group > small {
     font-weight: bold;
     color: rgb(182, 31, 94);
-    padding: .2rem;
     display: none;
 }
 

@@ -36,8 +36,8 @@
 
 // use font size variable
 .faq-question-title p {
-    font-size: 0.75rem;
-    font-size: root.$font-reg-clamp;
+    font-size: 1rem;
+    font-size: clamp(1rem, 0.8rem + 1vw, 2rem);
     padding: 2rem;
     text-align: start;
 }

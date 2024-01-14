@@ -608,8 +608,8 @@ nav {
 }
 
 .faq-question-title p {
-  font-size: 0.75rem;
-  font-size: clamp(0.75rem, 0.65rem + 0.5vw, 1.25rem);
+  font-size: 1rem;
+  font-size: clamp(1rem, 0.8rem + 1vw, 2rem);
   padding: 2rem;
   text-align: start;
 }
@@ -699,6 +699,9 @@ nav {
 .step-title {
   font-family: "Playfair Display", serif;
   font-size: 2rem;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
   margin: 0 auto;
   letter-spacing: 2px;
   border-bottom: 1px solid rgb(0, 0, 0);
@@ -767,7 +770,6 @@ select {
 .form-group > small {
   font-weight: bold;
   color: rgb(182, 31, 94);
-  padding: 0.2rem;
   display: none;
 }
 
@@ -840,6 +842,7 @@ select {
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding-inline: 1rem;
   padding-bottom: clamp(0rem, -1.4rem + 7vw, 7rem);
 }
 
@@ -1181,12 +1184,12 @@ footer a {
 }
 .modal-overlay {
   position: fixed;
-  top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   z-index: 5000;
   display: none;
-  padding: 7rem;
+  padding-block: 2rem;
+  padding-inline: clamp(1rem, -0.2rem + 6vw, 7rem);
   width: clamp(31.25rem, 25rem + 31.25vw, 62.5rem);
   text-align: left;
 }
@@ -1200,5 +1203,5 @@ footer a {
   margin-right: -55px;
   margin-bottom: -35px;
   background-color: transparent;
-  color: black;
+  color: rgb(0, 0, 0);
 }/*# sourceMappingURL=style.css.map */

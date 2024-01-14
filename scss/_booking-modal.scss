@@ -1,19 +1,18 @@
+@use 'root';
+// *******************************************
+// booking modal popup styling  
+// *******************************************
 
 .modal-overlay {
-    // position: -webkit-sticky;
     position: fixed;
-    top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    // transform: translateX(85%);
-    // height: 50%;
-    // left: 0;
+    transform: translateX(-50%);
     z-index: 5000;
     display: none;
 
-    padding: 7rem;
+    padding-block: 2rem;
+    padding-inline: clamp(1rem, -0.19999999999999996rem + 6vw, 7rem);
     width: clamp(31.25rem, 25rem + 31.25vw, 62.5rem);
-    // display: none;
     text-align: left;
 }
 
@@ -21,12 +20,10 @@
     display: grid;
 }
 
-
 .modal-close-btn {
     justify-self: end;
     margin-right: -55px;
-    // margin-top: 0px;
     margin-bottom: -35px;
     background-color: transparent;
-    color: black;
+    color: root.$neutral-black;
 }

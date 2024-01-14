@@ -38,8 +38,6 @@ const buttons = document.querySelectorAll('[data-carousel-button]');
 function carouselSlider() {
     buttons.forEach(button => {
     button.addEventListener('click', () => {
-        // const offset = button.dataset.carouselButton;
-        // console.log(offset);
         const offset = button.dataset.carouselButton === "next" ? 1 : -1;
         const slides = button
             .closest('[data-carousel]')
@@ -59,8 +57,6 @@ function carouselSlider() {
     })
 })
 }
-
-
 
 // treatment menu cards, populate category on click
 const content = document.querySelector('.content')
@@ -83,14 +79,13 @@ function displayItems(array) {
     menuDisplay = menuDisplay.join('');
     content.innerHTML = menuDisplay;
 
+    // mouse hover on card trailing circle 
     const cards = document.querySelectorAll('.option');
-    // trailing circle for card on mouse hover
+    
     cards.forEach((card) => {
-        console.log(card)
         card.className = 'option show';
 
         card.addEventListener('mousemove', (e) => {
-            // console.log(card)
             const rect = card.getBoundingClientRect();
 
             const left = e.clientX - rect.left;
@@ -107,10 +102,9 @@ function filterTreatments() {
     fetch('treatments-data.json')
     .then(res => res.json())
     .then(data => {
-        // console.log(data);
         const treatmentMenu = data;
         const keyword = e.target.dataset.orange;
-        // console.log(keyword)
+
         if (keyword) {
             displayByCategories = treatmentMenu.filter((item) => {
                 if (keyword === item.category) {
@@ -125,7 +119,6 @@ function filterTreatments() {
     })
 })
 }
-
 
 filterBtns.forEach((btn) => {
     btn.addEventListener('click', (e) => {
@@ -143,13 +136,11 @@ function fetchTreatments() {
     fetch('treatments-data.json')
     .then(res => res.json())
     .then(data => {
-        // console.log(data);
         const treatmentMenu = data;
 
         content.innerHTML = treatmentMenu.map((item) => {
             if (item.category === 'skincare') {
                 bgImgContainer.className = `treatments-background-img ${item.category}`;
-                console.log(item);
                 return `<div class="option">
                                 <h4>${item.title}</h4>
                                 <p>${item.desc}
@@ -158,11 +149,11 @@ function fetchTreatments() {
                         </div>`
             }}).join('');
         
+        // mouse hover on card trailing circle
         const cards = document.querySelectorAll('.option');
+
         cards.forEach((card) => {
-            // console.log(card)
             card.addEventListener('mousemove', (e) => {
-                console.log(card)
                 const rect = card.getBoundingClientRect();
 
                 const left = e.clientX - rect.left;
@@ -180,7 +171,8 @@ function fetchTreatments() {
 // FAQ functionality
 const questions = document.querySelectorAll('.faq-question');
 
-questions.forEach((question) => {
+function faq() {
+    questions.forEach((question) => {
     const btn = question.querySelector('.faq-question-btn');
     btn.addEventListener('click', (e) => {
         questions.forEach((item) => {
@@ -190,9 +182,9 @@ questions.forEach((question) => {
                 item.classList.remove('show-answer');
             }
         })
-    });
-
+    }); 
 })
+}
 // end of FAQ functionality
 
 
@@ -250,9 +242,7 @@ function populateSelect() {
             break;
     }
 })
-
 }
-
 
 const form = document.querySelector('.form')
 const fnameInput = document.getElementById('fname');
@@ -283,12 +273,7 @@ function getFieldName(input) {
 }
 
 // date input validation - enable only current date and 2 yrs beyond to be selected
-
-// console.log(dateInput)
-// console.log(dateInput.getAttribute('min'))
-
 function checkDate(dateInput) {
-
     let today = new Date().toISOString().slice(0, 10);
     dateInput.setAttribute('min', today);
     let oneYearFromNow = new Date().getFullYear();
@@ -312,10 +297,7 @@ function checkGuests(guests, min, max) {
 }
 
 function checkNames(fname, lname) {
-    // console.log(typeof(fname.value))
-    // console.log(typeof(lname.value))
     if (fname.value !== "" && lname.value !== "") {
-        // if (typeof(fname.value) !== "number" && typeof(lname.value) !== "number") {
             showSuccess(fname);
             showSuccess(lname);
     }
@@ -356,14 +338,14 @@ function checkPasswordsMatch(input1, input2) {
     }
 }
 
-// to create a multistep form, grab each individual phase(step)
+// multistep form, select each individual phase(step)
 const multiStepForm = document.querySelector('[data-multi-step]');
 const formSteps = [...document.querySelectorAll('[data-step]')];
 
 let currentStep = formSteps.findIndex((step) => {
     return step.classList.contains('active');
 })
-// we can set the current step to match the first phase(step) from our HTML markup
+// set the current step to match the first phase(step) from our HTML markup
 function showCurrentStep() {
     formSteps.forEach((step, index) => {
         step.classList.toggle('active', index === currentStep)
@@ -374,7 +356,6 @@ if (currentStep < 0) {
     currentStep = 0;
     showCurrentStep();
 }
-
 
 // validation loop & signal to go to next step 
 let incrementor;
@@ -444,34 +425,33 @@ const update = document.querySelector('.update');
 
 function formButtons() {
     nextBtn.addEventListener('click', (e) => {
-    nextStep();
-    
-    if (validation === true) {
-    incrementor = 1;
-    currentStep += incrementor;
-    showCurrentStep();
-    }
-})
+        nextStep();
+        
+        if (validation === true) {
+            incrementor = 1;
+            currentStep += incrementor;
+            showCurrentStep();
+        }
+    })
 
-prevBtn.addEventListener('click', (e) => {
-    incrementor = -1;
-    currentStep += incrementor;
-    showCurrentStep();
-})
+    prevBtn.addEventListener('click', (e) => {
+        incrementor = -1;
+        currentStep += incrementor;
+        showCurrentStep();
+    })
 
-submitBtn.addEventListener('click', (e) => {
-    validation = false;
-    nextStep();
-    update.innerText = emailInput.value;
-    
-    if (validation === true) {
-    incrementor = 1;
-    currentStep += incrementor;
-    showCurrentStep();
-    }
-})
+    submitBtn.addEventListener('click', (e) => {
+        validation = false;
+        nextStep();
+        update.innerText = emailInput.value;
+        
+        if (validation === true) {
+            incrementor = 1;
+            currentStep += incrementor;
+            showCurrentStep();
+        }
+    })
 }
-
 // end of booking functionality
 
 
@@ -480,7 +460,6 @@ const reviews = [
     {
         "id": 1,
         "name": 'Mateo Urdiales',
-        "job": 'product manager',
         "title": 'Great Service, Awesome Amenitites',
         "img": 'images/man-red-shirt.jpg',
         "text": 'My wife and I jump to come here whenever we can find a babysitter. Their deep tissue massages make me feel like a new man. Don\'t disregard their haircut services either. Sophia always provides me a great cut with great conversation.',
@@ -488,7 +467,6 @@ const reviews = [
     {
         "id": 2,
         "name": 'Sarah Forbes',
-        "job": 'beauty blogger',
         "title": 'Frequent Visitor',
         "img": 'images/woman-towel.jpg',
         "text":'The best spa in Dallas x10! I am a frequent local who comes just to get pampered! I always come for an 80-minute aromatherapy massage and the staff is fantastic at making me feel so relaxed and at ease. For your special occasions, be sure to book a celebrity facial with Chloe!' ,
@@ -496,7 +474,6 @@ const reviews = [
     {
         "id": 3,
         "name": 'Anna Koto',
-        "job": 'accountant',
         "title": 'Wonderful Experience',
         "img": 'images/woman-yellow-jacket.jpg',
         "text": 'Had a fabulous facial with Amanda! She was caring, gentle, and knowledgeable. Spa Selene is amazing! Friendly staff, great service selections, and the spa smell is soo good! Already scheduled my next appointment!',
@@ -504,7 +481,6 @@ const reviews = [
     {
         "id": 4,
         "name": 'Will Anderson',
-        "job": 'buisness owner',
         "title": 'Nice Relaxing Spa',
         "img": 'images/man-white-shirt.jpg',
         "text": 'Will be back as a regular customer for sure! I had the 50-minute therapeutic massage with Kim. She gave an amazing massage. The pressure was on point, and she checked in with me a couple of times to make sure I was taken care of. ',
@@ -522,96 +498,79 @@ const nextBtnRev = document.querySelector('.review-btn.next');
 
 let count = 0;
 
-
 function showReviews() {
     function showPerson(array) {
-    const update = reviews[count];
-    console.log(update)
-    image.src = update.img;
-    author.textContent = update.name;
-    // job.textContent = update.job;
-    mainInfo.textContent = update.title;
-    info.textContent = update.text;
-}
-
-nextBtnRev.addEventListener('click', () => {
-    count++;
-    if (count >= reviews.length) {
-        count = 0;
+        const update = reviews[count];
+        image.src = update.img;
+        author.textContent = update.name;
+        mainInfo.textContent = update.title;
+        info.textContent = update.text;
     }
-    showPerson();
-})
 
-prevBtnRev.addEventListener('click', () => {
-    count--;
-    if (count < 0) {
-        count = reviews.length - 1;
-    }
-    showPerson();
-})
+    nextBtnRev.addEventListener('click', () => {
+        count++;
+        if (count >= reviews.length) {
+            count = 0;
+        }
+        showPerson();
+    })
+
+    prevBtnRev.addEventListener('click', () => {
+        count--;
+        if (count < 0) {
+            count = reviews.length - 1;
+        }
+        showPerson();
+    })
 
 showPerson();
 }
+// end of reviews functionality
 
-
-
-// ********** scroll to form ************
-// select nodelist of links
-// associate each link to its corresponding section via an id
-// then, calculate the heights of involved elements
+// scroll to form when on home page
 const reserveLinks = document.querySelectorAll('.reserve');
-// const nav = document.querySelector('.nav');
 
 function scrollBooking() {
-reserveLinks.forEach((link) => {
-    link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const keyword = e.currentTarget.getAttribute('href').slice(1);
-        console.log(keyword);
-        const corresponding = document.getElementById(keyword);
-        console.log(corresponding)
+    // select nodelist of links
+    reserveLinks.forEach((link) => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            // associate each link to its corresponding section via an id
+            const keyword = e.currentTarget.getAttribute('href').slice(1);
+            const corresponding = document.getElementById(keyword);
 
-        const navHeight = nav.getBoundingClientRect().height;
-        console.log(navHeight);
-        const containerHeight = linksContainer.getBoundingClientRect().height;
-        const fixedNav = nav.classList.contains('fixed');
-        // const fixedNavHeight = fixedNav.getBoundingClientRect().height;
-        let position = corresponding.offsetTop - navHeight;
-        console.log(position)
-        // if (!fixedNav) {
-        //     position = position - navHeight;
-        // } 
-        if (linksContainer.classList.contains('show-links')) {
-            position = position + (containerHeight + containerHeight);
-        } 
-        if (!fixedNav) {
-            position = position - (navHeight - 50);
-        }
-        if (fixedNav) {
-            position = position - (navHeight);
-        }
+            // calculate the heights of involved elements
+            const navHeight = nav.getBoundingClientRect().height;
+            const containerHeight = linksContainer.getBoundingClientRect().height;
+            const fixedNav = nav.classList.contains('fixed');
+            let position = corresponding.offsetTop - navHeight;
 
-        window.scrollTo ({
-            left: 0,
-            top: position,
-    })
-    // linksContainer.style.height = 0;
+            if (linksContainer.classList.contains('show-links')) {
+                position = position + (containerHeight + containerHeight);
+            } 
+            if (!fixedNav) {
+                position = position - (navHeight - 50);
+            }
+            if (fixedNav) {
+                position = position - navHeight;
+            }
+
+            window.scrollTo ({
+                left: 0,
+                top: position,
+        })
     })
 })
 }
+// start of scroll functionality
 
-
-
-
-
-
-
+// start of booking modal functionality
 const modalCloseBtn = document.querySelector('.modal-close-btn');
 const modal = document.querySelector('.modal-overlay');
 const activateModalBtn = document.querySelector('.activate-modal-btn');
 const navReserveBtn = document.querySelector('.nav-reserve-btn')
 
-if(globalState !== '/index.html' || globalState !== '/spa-selene/' || globalState !== '/#reserve') {
+if (globalState !== '/index.html' || globalState !== '/spa-selene/' || globalState !== '/#reserve') {
     navReserveBtn.addEventListener('click', () => {
     modal.classList.add('show-modal')
     })
@@ -625,39 +584,20 @@ function bookingModal() {
         modal.classList.remove('show-modal')
     })
 }
+// end of booking modal functionality
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Below is a router, so wherever we want to run a function in response to a certain page, we'll put it inside that corresponding case
-// console.log((globalState.currentPage))
-// Init app
+// Below is a router, if a function should be run in response to a certain page, it goes inside the corresponding switch case
 function init() {
     switch(globalState.currentPage) {
         case '/spa-selene/':
         case '/spa-selene/index.html':
         case '/index.html':
+            scrollBooking();
             carouselSlider()
             fetchTreatments();
             filterTreatments();
-            scrollBooking();
+            faq();
             formButtons();
             populateSelect();
             showReviews();
@@ -679,6 +619,7 @@ function init() {
         case '/about.html':
         case '/spa-selene/about.html':
             carouselSlider()
+            faq();
             bookingModal();
             formButtons();
             populateSelect();
